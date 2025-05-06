@@ -1,0 +1,14 @@
+[
+    {
+    "carpooling": "Paris-Amboise",
+    "preferences": [
+      "nosmoke",
+      "smoke"
+    ],
+    "answer": "no smoke",
+    "energy":"electrique"
+  },
+  {
+   
+  }
+]

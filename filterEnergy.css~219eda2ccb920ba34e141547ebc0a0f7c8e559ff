@@ -1,0 +1,427 @@
+body{ 
+    font-family: 'Franklin Gothic Medium','Times New Roman', Times, serif sans-serif;
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 768px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: #98c433;
+}
+.banniere-logo{
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
+.logo_ecoride{
+    width: 100px;
+    height: 100px;
+}
+
+.btn_menu{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon_menu{
+    height: 20px;
+    width: 20px;
+}
+.dropbtn {
+    background-color: white;
+    border: none;
+  }
+  .dropdown {
+    height: 30px;
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 20px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+  }
+  .dropdown-content a:hover {
+    background-color:black;
+    color: white;
+}
+  .dropdown:hover .dropdown-content {display: flex;}
+  .dropdown:hover .dropbtn {background-color: #98c433;}
+
+.headnav{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    width: 250px;
+    height: 30px;
+    margin-left:15%;
+    background-color: #26116A;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px #639e3f;
+    position:absolute;
+    margin-top: -15px;
+}
+a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.arrow_back{
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    color: white;
+}
+.ahome:hover{
+    background-color: white;
+    color: black;
+}
+.acreer_uncompte:hover{
+    color: black;
+    background-color: white;
+    padding: 2px;
+}
+.alogin:hover{
+    color: black;
+    background-color: white;
+    padding: 2px;
+}
+main{
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.presentation_itinerary{
+    height: 150px;
+    width: 290px;
+    background-color:#98c433;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.img_search_my_itinerary{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: #26116A solid ;
+    margin-left: 30%;
+}
+.rod_presentation_itinerary{
+    width: 290px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: #26116A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.energy-btn{
+    background-color: #98c433;
+    color: black;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.energy-btn:hover{
+    background-color: white;
+    color: black;
+    transform:scaleX(1.1);
+}
+
+.card_formulaire{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 400px;
+    width: 290px;
+    background-color: #98c433;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rod_dep{
+    height: 30px;
+    width: 250px;
+    background-color: #260401;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+
+}
+.card-destination{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.rod_destination {
+    height: 50px;
+    width: 280px;
+    background-color: white;
+    color:#26116A;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+}
+.rod_destination a:hover{
+        background-color:#26116A;
+        color: white;
+    }
+    .rod_destinations {
+        height: 150px;
+        width: 280px;
+        background-color: white;
+        color: #26116A;
+        margin-top: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2px;
+    }
+    .rod_destinations a:hover{
+            background-color:#26116A;
+            color: white;
+        }
+
+.dropdown-content-destination a{
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+input{
+    margin: 10px;
+    height: 30px;
+    width: 280px;
+    cursor: pointer;
+}
+
+.search{
+    width: 260px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 100px;
+    background: #ff3e3e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+.ablack{
+    color: black;
+}
+
+footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    padding-bottom: 15px;
+    background-color: #26116A;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerlink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footera:hover{
+    background-color: white;
+    color: black;
+}
+.banniere-logo-footer{
+    font-family: cursive;
+}
+.logo_footer{
+    height: 50px;
+    width: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        min-width: 768px;
+        max-width: 1024px;
+    }
+    .logo_ecoride{
+        width: 150px;
+        height: 150px;
+    }
+ 
+nav{
+    width: 500px;
+}
+
+.presentation_itinerary{
+    height: 150px;
+    width: 690px;
+    background-color:#98c433;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.card_formulaire{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 690px;
+    background-color: #98c433;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rod_dep{
+    height: 30px;
+    width: 580px;
+    background-color: #260401;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+
+}
+.rod_arrived{
+    height: 30px;
+    width: 580px;
+    background-color: #260401;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+}
+input{
+    width: 580px;
+}
+.search{
+    width: 660px;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+        min-width: 1024px;
+        max-width: none;
+        font-size: medium;
+    }
+    .logo_ecoride{
+        width: 200px;
+        height: 200px;
+    }
+ 
+    nav{
+    width: 700px;
+    }
+
+.presentation_itinerary{
+    height: 250px;
+    width: 990px;
+    background-color:#98c433;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.img_search_my_itinerary{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: #26116A solid ;
+    margin-left: 40%;
+}
+
+.card_formulaire{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 990px;
+    background-color: #98c433;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rod_dep{
+    height: 30px;
+    width: 880px;
+    background-color: #260401;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+
+}
+.rod_arrived{
+    height: 30px;
+    width: 880px;
+    background-color: #260401;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px;
+}
+input{
+    width: 880px;
+}
+.search{
+    width: 960px;
+    height: 50px;
+}
+}
+
+
