@@ -8,24 +8,28 @@ body{
     flex-direction: column;
 }
 header{
-    background-color: #98c433;
+    border-bottom:solid 1px #26116A;
     padding-right: 10px;
 }
 .banniere-logo{
     display: flex;
     justify-content: center;
     font-family: cursive;
+    background-color: #98c433;
+    border:solid 2px #98c433;
 }
+
 .logo_ecoride{
     width: 100px;
     height: 100px;
+    border-color: #26116A;
 }
 .appbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color:#639e3f;
+    background-color:white;
     color: black;
     margin-top: 10px;
 }
@@ -58,7 +62,7 @@ header{
     color: white;
 }
 .ecoriders{
-    background-color: #639e3f;
+    background-color: white;
     border-radius: 5px;
     border: solid 1px black;
     box-shadow: 0 1px 0 0 ;
@@ -125,7 +129,7 @@ nav{
     justify-items: center;
     justify-content: space-around;
     align-items: center;
-    border: solid 2px #639e3f;
+    border: solid 2px;
     position:absolute;
     margin-top: -15px;
 }
@@ -156,6 +160,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 .presentation_ecoride{
@@ -163,7 +168,7 @@ main{
     height: 400px;
     width: 290px;
     margin-top: 30px;
-    background-color:#639e3f;
+    border: #639e3f solid 1px;
     color: black;
     display: flex;
     flex-direction: column;
@@ -206,7 +211,7 @@ h1{
     margin-bottom: 10px;
     height: 600px;
     width: 290px;
-    background-color: #98c433;
+    border:solid 1px #98c433;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -216,8 +221,8 @@ h1{
 .rod_dep{
     height: 30px;
     width: 250px;
-    background-color:#260401;
-    color:white;
+    border-color:solid 1px;
+    color:black;
     margin-top: 10px;
     cursor: pointer;
     display: flex;
@@ -296,10 +301,9 @@ footer{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     padding-bottom: 15px;
-    background-color: #26116A;
-    color: white;
     display: flex;
     justify-content: space-evenly;
+    background-color: #26116A;
 }
 .footerlink{
     display: flex;
