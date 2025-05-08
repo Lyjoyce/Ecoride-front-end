@@ -55,8 +55,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 */
 //////////////////////////////////////////
-
-
+function escapeHtml(text) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    }
+    return text.replace(/[&<>"']/g, (m) => map[m])
+}
 
 //Choisir le niveau de note
 
@@ -75,7 +83,7 @@ let selectedNote = ""
 
 async function loadCarpools(note){
     try{
-        const response = await fetch ("/frontend_ecoride/filterNote.json")
+        const response = await fetch ("filterNote.json")
 
         if (!response.ok){
             throw new Error(`Erreur HTTP: ${response.status}`)
@@ -109,8 +117,8 @@ function showCarpool() {
         const carpoolContainer= document.getElementById("filter-container")
 
         carpoolContainer.innerHTML = `
-        <div class"carpool">
-        <p> ${carpoolData.carpool} <p/>
+        <div class="carpool">
+        <p> ${carpoolData.carpool} </p>
         <div/>
         <form id="filter-form">
          ${carpoolData.options

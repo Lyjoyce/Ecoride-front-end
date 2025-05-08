@@ -18,11 +18,13 @@ header{
     background-color: #98c433;
     border:solid 2px #98c433;
 }
-
 .logo_ecoride{
     width: 100px;
     height: 100px;
-    border-color: #26116A;
+}
+.myself{
+    display: flex;
+    flex-direction: row;
 }
 .appbar{
     display: flex;
@@ -35,6 +37,7 @@ header{
 }
 .firstname-menu{
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
 }
 #firstname-display{
@@ -61,13 +64,7 @@ header{
     background-color:#260401;
     color: white;
 }
-.ecoriders{
-    background-color: white;
-    border-radius: 5px;
-    border: solid 1px black;
-    box-shadow: 0 1px 0 0 ;
-    cursor: pointer;
-}
+
 .btn_menu{
     height: 20px;
     width: 20px;
@@ -86,11 +83,10 @@ header{
     border: none;
   }
   .dropdown {
-    height: 80px;
-    position: relative;
+    height: 50px;
     display:flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content:flex-start ;
     margin: 20px;
   }
   .dropdown-content {
@@ -104,7 +100,7 @@ header{
     padding: 5px;
     text-decoration: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 12px;
   }
   .dropdown-content a:hover {
@@ -160,21 +156,19 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
 }
 
 .presentation_ecoride{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 400px;
-    width: 290px;
+    width: 320px;
     margin-top: 30px;
-    border: #639e3f solid 1px;
+    border-bottom: #639e3f solid 1px;
     color: black;
     display: flex;
     flex-direction: column;
 }
 h1{
-    font-size: medium;
     margin: 10px;
 }
 .txt_eco_slogan{
@@ -195,7 +189,7 @@ h1{
 }
 
 .rod_presentation_itinerary{
-    width: 290px;
+    width: 320px;
     height: 30px;
     border-radius: 100px;
     background-color: #26116A;
@@ -203,19 +197,18 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .card_formulaire{
     margin-top: 20px;
     margin-bottom: 10px;
-    height: 600px;
-    width: 290px;
+    height: 400px;
+    width: 320px;
     border:solid 1px #98c433;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .rod_dep{

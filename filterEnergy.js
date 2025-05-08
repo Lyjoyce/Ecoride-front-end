@@ -13,7 +13,7 @@ let selectedEnergy = ""
 //Chargement des carpoolings en fonction du filtre
 async function loadCarpoolings(energy){
     try{
-        const response = await fetch ("/frontend_ecoride/filterEnergy.json")
+        const response = await fetch ("filterEnergy.json")
 
         if (!response.ok){
             throw new Error(`Erreur HTTP: ${response.status}`)
@@ -47,8 +47,8 @@ function showCarpooling() {
         const carpoolingContainer= document.getElementById("filter-container")
 
         carpoolingContainer.innerHTML = `
-        <div class"carpooling">
-        <p> ${carpoolingData.carpooling} <p/>
+        <div class="carpooling">
+        <p> ${carpoolingData.carpooling} </p>
         <div/>
         <form id="filter-form">
          ${carpoolingData.options
@@ -109,7 +109,11 @@ function showFinalResult() {
     </div>
     `
 }
-//
+/*function loadCarpoolings(energy){
+    score = 0 // <-- Ajouté ici
+    ...
+}
+
 /*
 function submitQuiz() {
     calculateScore(function(score) {
