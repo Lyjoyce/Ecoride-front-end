@@ -51,54 +51,87 @@
     </header>
 
     <main>
-        <article  class="presentation_ecoride">
+        <article class="presentation_ecoride">
             <div>
                 <h1>COVOITURAGE DES GRANDES VILLES</h1>
                 <img src="images/car_bio.png" class="img_presentation car_bio" alt="car_bio">
-                <img src="images/covoiturage.png" class="img_presentation car_covoiturage"
-                    alt="car_covoiturage">
+                <img src="images/covoiturage.png" class="img_presentation car_covoiturage" alt="car_covoiturage">
                 <img src="images/car_eco.png" class="img_presentation car_eco" alt="car_eco">
                 <h2 class="txt_eco_slogan">ECOLOGIQUE ECONOMIQUE ECORESPONSABLE</h2>
             </div>
         </article>
 
         <article>
-        <div class="rod_presentation_itinerary">
-            <h2>Trouver mon itinéraire</h2></div>
+            <div class="rod_presentation_itinerary">
+                <h2>Trouver mon itinéraire</h2>
+            </div>
 
-        <form>
-            <div class="card_formulaire">
+            <form class="card_formulaire">
                 <div>
                     <div class="dropdown">
-                            <h3 class="rod_dep">De Paris : Ile-de-France </h3> 
+                        <h3 class="rod-dep">De Paris : Ile-de-France </h3>
                         <div class="dropdown-content">
                             <a href="parisgaremontparnasse.html">Paris gare Montparnasse</a>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="card-destination">
+                </div>
+                <div class="container">
+                    <h3 class="rod-dest">A ma région </h3>
+                    <div class="region-selection">
+                        <h3>Sélectionner votre région de destination</h3>
 
                         <div class="destination-dropdown">
-                            <button class="dest-btn ">
-                                Bretagne
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="parisrennes.html">Paris-Rennes</a>
-                            </div>
-                        </div>
+                        <button class="region-btn" data-level="bretagne">Bretagne</button>
+                        <div class="dropdown-content-destination a">
+                        <a href="parisrennes.html">Paris-Rennes</a>
+                    </div>
+                    </div>
 
-                        <div class="dropdown">
-                            <div class="dest-btn ">
-                                Centre-Val de Loire
-                                <a href="details-centre.html" class="ablack search">détails</a>
-                            </div>
-                            <div class="dropdown-content">
-                                <a href="pariscentre.html">Paris- Centre-Val de Loire</a>
-                            </div>
-                        </div>
-                        <!--
+                        <button class="region-btn" data-level="centre-Val">Centre-Val</button>
+                        <button class="region-btn" data-level="normandie">Normandie</button>
+                    </div>
+                    <div id="quiz-container" class="hidden"></div>
+                </div>
+            </form>
+        </article>
+
+        <article>
+            <form id="quiz-form">
+                <div class="question">
+                    <p>Quelle est la capitale de la France?</p>
+                    <label><input type="radio" name="q1" value="Paris">Paris</label>
+                    <label><input type="radio" name="q1" value="Londres">Londres</label>
+                    <label><input type="radio" name="q1" value="Rome">Rome</label>
+                </div>
+                <div class="question">
+                    <p>Quelle est la planète la plus proche de la Terre?</p>
+                    <label><input type="radio" name="q2" value="Mercure">Mercure</label>
+                    <label><input type="radio" name="q2" value="Venus">Venus</label>
+                    <label><input type="radio" name="q2" value="Mars">Mars</label>
+                </div>
+                <div class="question">
+                    <p>Quelle est la plus grande planète du système solaire?</p>
+                    <label><input type="radio" name="q3" value="Jupiter">Jupiter</label>
+                    <label><input type="radio" name="q3" value="Saturne">Saturne</label>
+                    <label><input type="radio" name="q3" value="Neptune">Neptune</label>
+                </div>
+
+                <button type="button" onclick="submitQuiz()">Soumettre</button>
+            </form>
+        </article>
+       
+
+                <div class="dropdown">
+                    <div class="dest-btn ">
+                        Centre-Val de Loire
+                        <a href="details-centre.html" class="ablack search">détails</a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="pariscentre.html">Paris- Centre-Val de Loire</a>
+                    </div>
+                </div>
+                <!--
                                 <a href="parisamboise.html">Paris-Amboise</a>
                                 <a href="parisblois.html">Paris-Blois</a>
                                 <a href="parischartes.html">Paris-Chartres</a>
@@ -147,12 +180,12 @@
                         <input type="datetime-local">
                     input type="datetime-local">
                      -->
-                    </div>
-
-                </div>
             </div>
+
+        </div>
+
         </form>
-    </article>
+        </article>
     </main>
 
     <footer>
