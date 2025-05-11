@@ -125,28 +125,7 @@ function showQuestion() {
         showFinalResult();
     }
 }
-/*
-function submitAnswer() {
-    const form = document.getElementById("quiz-form");
-    const selectedOption = form.querySelector('input[name="answer"]:checked');
 
-    if (!selectedOption) {
-        alert("Veuillez sélectionner une réponse.");
-        return;
-    }
-
-    const userAnswer = selectedOption.value;
-    const correctAnswers = questions[currentQuestionIndex].answer;
-
-    const resultContainer = document.getElementById("result");
-    if (correctAnswers.includes(userAnswer)) {
-        resultContainer.innerHTML = `<p>  ${userAnswer} Pour participer, veuillez vous connecter</p>`;
-    } else {
-        resultContainer.innerHTML = `<p class="error">❌ Mauvaise réponse. Réponses attendues : ${correctAnswers.join(", ")}</p>`;
-    }
-}
-*/
-///////////
 function submitAnswer() {
     const form = document.getElementById("quiz-form");
 
