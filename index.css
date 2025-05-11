@@ -7,6 +7,12 @@ body{
     display: flex;
     flex-direction: column;
 }
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
 header{
     border-bottom:solid 1px #26116A;
     padding-right: 0px;
@@ -186,7 +192,9 @@ h1{
     flex-direction: column;
     margin-left: 25%;
 }
-
+.preferences{
+    border-top: #98c433 solid 1px;
+}
 .rod_presentation_itinerary{
     width: 320px;
     height: 30px;
@@ -199,16 +207,6 @@ h1{
     margin-top: 30px;
 }
 
-.card_formulaire{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    height: 400px;
-    width: 320px;
-    border-top:solid 1px #98c433;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .rod-dep{
     height: 30px;
     width: 250px;
@@ -253,12 +251,6 @@ h1{
 .hidden{
     display: none;
 }
-input{
-    margin: 10px;
-    height: 30px;
-    width: 280px;
-    cursor: pointer;
-}
 
 .search{
     width: 70px;
@@ -274,9 +266,6 @@ input{
 }
 .search:hover{
     background-color: white;
-}
-.ablack{
-    color: black;
 }
 
 footer{
@@ -321,7 +310,6 @@ nav{
     height: 600px;
     width: 690px;
     margin-top: 30px;
-    background-color:#639e3f;
     color: black;
 }
 h1{
@@ -356,46 +344,6 @@ h1{
     width: 690px;
 }
 
-.card_formulaire{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 500px;
-    width: 690px;
-    background-color: #98c433;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.rod_dep{
-    height: 30px;
-    width: 580px;
-    background-color: #260401;
-    color:white;
-    margin-top: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 2px;
-
-}
-.rod_arrived{
-    height: 30px;
-    width: 580px;
-    background-color: #26116A;
-    color: white;
-    margin-top: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 2px;
-}
-input{
-    width: 580px;
-}
 .search{
     width: 60px;
 }
@@ -417,14 +365,16 @@ input{
     }
     .presentation_ecoride{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 500px;
+    height: 400px;
     width: 990px;
     margin-top: 30px;
-    background-color:#639e3f;
     color: black;
     display: flex;
     flex-direction: row;
-
+    }
+    .pres-row{
+        display: flex;
+        flex-direction: row;
     }
 h1{
     font-size: larger;
@@ -438,7 +388,7 @@ h1{
     display: flex;
     flex-direction: row;
     margin-right:60%;
-    margin-top: 40%;
+    margin-top: 30%;
 }
 .img_presentation{
     width: 200px;
@@ -447,21 +397,13 @@ h1{
     margin-top: 10%;
 }
 .car_covoiturage{
-    margin-left: 1%;
+    margin-left: 4%;
 }
 .car_eco{
-   margin-left:1%;
+   margin-left:4%;
 }
 .car_bio{
-   margin-left: 1%;
-}
-
-.presentation_itinerary{
-    height: 250px;
-    width: 990px;
-    background-color:#98c433;
-    margin-top: 20px;
-    margin-bottom: 10px;
+   margin-left: 4%;
 }
 
 .rod_presentation_itinerary{
@@ -476,46 +418,6 @@ h1{
     margin-top: 5px;
 }
 
-.card_formulaire{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 500px;
-    width: 990px;
-    background-color: #98c433;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.rod_dep{
-    height: 30px;
-    width: 880px;
-    background-color:#260401;
-    color:white ;
-    margin-top: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 2px;
-
-}
-.rod_arrived{
-    height: 30px;
-    width: 880px;
-    background-color: #26116A;
-    color: white;
-    margin-top: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 2px;
-}
-input{
-    width: 880px;
-}
 .search{
     width: 60px;
     height: 30px;
