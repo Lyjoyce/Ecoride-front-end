@@ -1,3 +1,14 @@
+function escapeHtml(text) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    }
+    return text.replace(/[&<>"']/g, (m) => map[m])
+}
+
 async function registerUser(){
     const firstname= document.getElementById("firstname").value
     const lastname= document.getElementById("lastname").value

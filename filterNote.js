@@ -105,7 +105,7 @@ async function loadCarpools(note){
 //Démarrer le quiz
 function startFilterNote() {
     document.querySelector(".note-selection").classList.add("hidden")
-    document.getElementById("filter-container").classList.remove("hidden")
+    document.getElementById("notefilter-container").classList.remove("hidden")
     showCarpool()
 }
 
@@ -114,12 +114,12 @@ function startFilterNote() {
 function showCarpool() {
     if(currentCarpoolIndex < carpools.length) {
         const carpoolData = carpools[currentCarpoolIndex]
-        const carpoolContainer= document.getElementById("filter-container")
+        const carpoolContainer= document.getElementById("notefilter-container")
 
         carpoolContainer.innerHTML = `
         <div class="carpool">
         <p> ${carpoolData.carpool} </p>
-        <div/>
+        </div>
         <form id="filter-form">
          ${carpoolData.options
          .map(
@@ -142,7 +142,7 @@ function showCarpool() {
 
 //Soumettre le choix
 function submitAnswer(){
-    const form = document.getElementById("filter-form")
+    const form = document.getElementById("notefilter-container")
     const selectAnswer = form.answer.value
 
     if (!selectAnswer){
@@ -172,7 +172,7 @@ function incrementScore() {
 }
 //Afficher le résultat final
 function showFinalResult() {
-    const filterContainer = document.getElementById("filter-container")
+    const filterContainer = document.getElementById("notefilter-container")
     filterContainer.innerHTML = `
     <div id="result">
     <p>Votre score final est de ${score} sur ${carpools.length}.</p>
@@ -187,46 +187,7 @@ function submitQuiz() {
         })
     })
 }
-/*
-function calculateScore(callback){
-    const correctAnswers ={
-        q1:"Paris",
-        q2:"Mercure",
-        q3:"Jupiter",
-    }
-    const form = document.getElementById("quiz-form")
-    let score=0
-    for(const question in correctAnswers){
-        const userAnswers= form[question].value
-        if(userAnswers===correctAnswers[question]){
-            score++
-        }
-    }
-    callback(score)
-}
-//une fonction qui a la responsabilité d'afficher un mss en f° du score
 
-  /*
-  @param {*int} score 
- */
-/*
-function handleMessage(score){
-    const resultDIV = document.getElementById("result")
-
-    //To clean the result on page
-    resultDIV.classList.remove("excellent","good","try-again")
-    if(score===10){
-        resultDIV.innerHTML+=" <br>Excellent!"
-        resultDIV.classList.add("excellent")
-        }else if(score===7){
-        resultDIV.innerHTML+=" <br>Bon travail, vous pouvez vous améliorer!"
-        resultDIV.classList.add("good")
-        }else{
-        resultDIV.innerHTML+=" <br>Vous pouvez faire mieux!"
-        resultDIV.classList.add("try-again")
-    }
-}
 //COOKIE
 document.cookie = "username=zaz; expires=Fri, 01 aout 2025 12:00:00 UTC";
 
-*/

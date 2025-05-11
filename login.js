@@ -1,4 +1,14 @@
-//LOGIN expliquer la f, ses paramètres,types, ce qu'elle renvoie
+
+function escapeHtml(text) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    }
+    return text.replace(/[&<>"']/g, (m) => map[m])
+}//LOGIN expliquer la f, ses paramètres,types, ce qu'elle renvoie
 function login(){
     const firstname= document.getElementById("login-actorname").value
     const lastname= document.getElementById("login-lastname").value

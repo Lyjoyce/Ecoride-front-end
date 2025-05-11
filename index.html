@@ -65,38 +65,92 @@
             <div class="rod_presentation_itinerary">
                 <h2>Trouver mon itinéraire</h2>
             </div>
+        
+            <div>
+                <div class="dropdown">
+                    <h3 class="rod-dep">De Paris : Ile-de-France </h3>
+                    <div class="dropdown-content">
+                        <a href="parisgaremontparnasse.html">Paris gare Montparnasse</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="region-selection">
+                    <h3>Choisissez votre région</h3>
+                    <button class="region-btn" data-level="Bretagne">Bretagne</button>
+                    <button class="region-btn" data-level="Centre-Val de Loire">Centre-Val de Loire</button>
+                    <button class="region-btn" data-level="Normandie">Normandie</button>
+                </div>
+        
+                <div id="quiz-container" class="hidden"></div>
+                <div id="result"></div>
+            </div>
+        </article>
 
-            <form class="card_formulaire">
-                <div>
+        <article>
+            <div class="note-container">
+                 <div class="rod_presentation_itinerary">
+                        <h2>Sélectionner mes préférences</h2>
+                    </div>
+               
+                <div class="note-selection">
+                    <div>
+                        <h3>Choisissez votre conducteur par sa note :</h3>
+                    </div>
+        
+                    <button class="note-btn" data-level="3">3</button>
+                    <button class="note-btn" data-level="4">4</button>
+                    <button class="note-btn" data-level="5">5</button>
+                </div>
+        
+                <div id="notefilter-container" class="hidden"></div>
+            </div>
+        </article>
+        <!--
+                    <div class="destination-dropdown">
+                        <button class="region-btn" data-level="bretagne">Bretagne</button>
+                        <div class="destination-dropdown-content">
+                            <a href="parisrennes.html">Paris-Rennes</a>
+                        </div>
+                    </div>
+
                     <div class="dropdown">
-                        <h3 class="rod-dep">De Paris : Ile-de-France </h3>
+                        <button class="region-btn" data-level="bretagne">Centre-Val de Loire</button>
                         <div class="dropdown-content">
-                            <a href="parisgaremontparnasse.html">Paris gare Montparnasse</a>
+                            <a href="parisrennes.html">Paris-Amboise</a>
+                            <a href="parisblois.html">Paris-Blois</a>
+                            <a href="parischartes.html">Paris-Chartres</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="region-btn" data-level="normandie">Normandie</button>
+                        <div class="dropdown-content">
+                            <a href="pariscaen.html">Paris-Caen</a>
+                            <a href="parisdeauville.html">Paris-Deauville</a>
+                            <a href="parisrouen.html">Paris-Rouen</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dest-btn ">
+                            Pays de la Loire
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="parislamans.html">Paris-Le Mans</a>
+                            <a href="parisnantes.html">Paris-Nantes</a>
                         </div>
                     </div>
 
                 </div>
-                <div class="container">
-                    <h3 class="rod-dest">A ma région </h3>
-                    <div class="region-selection">
-                        <h3>Sélectionner votre région de destination</h3>
+                <div id="quiz-container" class="hidden"></div>
 
-                        <div class="destination-dropdown">
-                        <button class="region-btn" data-level="bretagne">Bretagne</button>
-                        <div class="dropdown-content-destination a">
-                        <a href="parisrennes.html">Paris-Rennes</a>
-                    </div>
-                    </div>
-
-                        <button class="region-btn" data-level="centre-Val">Centre-Val</button>
-                        <button class="region-btn" data-level="normandie">Normandie</button>
-                    </div>
-                    <div id="quiz-container" class="hidden"></div>
-                </div>
             </form>
         </article>
-
+    
         <article>
+            <h2>Choisir mes filtres</h2>
             <form id="quiz-form">
                 <div class="question">
                     <p>Quelle est la capitale de la France?</p>
@@ -118,74 +172,7 @@
                 </div>
 
                 <button type="button" onclick="submitQuiz()">Soumettre</button>
-            </form>
-        </article>
-       
-
-                <div class="dropdown">
-                    <div class="dest-btn ">
-                        Centre-Val de Loire
-                        <a href="details-centre.html" class="ablack search">détails</a>
-                    </div>
-                    <div class="dropdown-content">
-                        <a href="pariscentre.html">Paris- Centre-Val de Loire</a>
-                    </div>
-                </div>
-                <!--
-                                <a href="parisamboise.html">Paris-Amboise</a>
-                                <a href="parisblois.html">Paris-Blois</a>
-                                <a href="parischartes.html">Paris-Chartres</a>
-                                <a href="parischateaudun.html">Paris-Chateaudun</a>
-                                <a href="parisorleans.html">Paris-Orléans</a>
-                                <a href="paristours.html">Paris-Tours</a>
-                        <div class="dropdown">
-                            <button class="dropbtn ">
-                                Hauts-de-France
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="parislille.html">Paris-Lille</a>
-                            </div>
-                        </div>
-
-                        <div class="dropdown">
-                            <button class="dropbtn ">
-                                Ile-de-France
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="parisnogent.html">Paris-Nogent-le-Rotrou</a>
-                                <a href="parisversailles.html">Paris-Versailles</a>
-                            </div>
-                        </div>
-
-                        <div class="destination-dropdown">
-                            <button class="dest-btn ">
-                                Normandie
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="pariscaen.html">Paris-Caen</a>
-                                <a href="parisdeauville.html">Paris-Deauville</a>
-                                <a href="parisrouen.html">Paris-Rouen</a>
-                            </div>
-                        </div>
-
-                        <div class="dropdown">
-                            <button class="dest-btn ">
-                                Pays de la Loire
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="parislamans.html">Paris-Le Mans</a>
-                                <a href="parisnantes.html">Paris-Nantes</a>
-                            </div>
-                        </div>
-                        <input type="datetime-local">
-                    input type="datetime-local">
-                     -->
-            </div>
-
-        </div>
-
-        </form>
-        </article>
+            -->
     </main>
 
     <footer>
