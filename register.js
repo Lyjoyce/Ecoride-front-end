@@ -14,9 +14,9 @@ async function registerUser(){
     const lastname= document.getElementById("lastname").value
     const email= document.getElementById("email").value
     const password= document.getElementById("password").value
-    c
+    
 
-    const url = "http://www.localhost:8081/api/v1/actor/addNewActor"
+    const url = "http://localhost:8081/api/v1/actor/addNewActor"
 
     if(firstname&&lastname&&email&&password){
 
@@ -38,7 +38,7 @@ async function registerUser(){
                 const data = await response.json()
                 console.log("userRegistered :", data)
                 alert("inscription réussie! Vous pouvez maintenant vous connecter")
-                window.location.href="/frontend_ecoride/login.html"
+                window.location.href="login.html"
 
             }else{
             const errorData = await response.json()
@@ -54,6 +54,60 @@ async function registerUser(){
             }
         }
 //////////
+/* corriger chatGPT REGISTER USER
+function showUserMenu(firstname) {
+    const firstnameDisplay = document.getElementById("actorname-display");
+    if (firstnameDisplay) {
+        firstnameDisplay.textContent = escapeHtml(firstname);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const storedFirstname = localStorage.getItem("firstname");
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+
+    if (storedFirstname && isAuthenticated === "true") {
+        showUserMenu(storedFirstname);
+    } else {
+        window.location.href = "login.html";
+    }
+
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            localStorage.clear(); // Tout supprimer
+            window.location.href = "login.html";
+        });
+    }
+});
+/////AFFICHER PRENOM
+function showUserMenu(firstname) {
+    const firstnameDisplay = document.getElementById("actorname-display");
+    if (firstnameDisplay) {
+        firstnameDisplay.textContent = escapeHtml(firstname);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const storedFirstname = localStorage.getItem("firstname");
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+
+    if (storedFirstname && isAuthenticated === "true") {
+        showUserMenu(storedFirstname);
+    } else {
+        window.location.href = "login.html";
+    }
+
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            localStorage.clear(); // Tout supprimer
+            window.location.href = "login.html";
+        });
+    }
+});
+
+*/
 /*
         function showUserMenu(firstname){
             const firstnameDisplay= document.getElementById("actorname-display")
