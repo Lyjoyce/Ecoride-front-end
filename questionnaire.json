@@ -1,12 +1,12 @@
 [
     {
-      "question": "Les détails du covoiturage Bretagne",
+      "question": "Les détails du covoiturage vers la Bretagne",
       "region":"Bretagne",
       "option" :"",
-      "answer": "Paris"
+      "answer": ""
     },
     {
-      "question": "Les détails du covoiturage Centre-Val de Loire",
+      "question": "Les détails du covoiturage vers le Centre-Val de Loire",
       "region":"Centre-Val de Loire",
       "options": [
         "De Paris, 75015 gare Montparnasse à Tours 37000 gare de Tours. carpooling Paris-Tours, conducteur :Marc Led. Depart: dimanche 10H; Arrivée: dimanche 12H. Durée=2H00. Prix= 6 credits. Note= 4. Energy: electrique",
@@ -16,7 +16,7 @@
      
     },
     {
-      "question": "Les détails du covoiturage Normandie",
+      "question": "Les détails du covoiturage vers la Normandie",
       "region":"Normandie",
       "options": [
       "De Paris, 75015 gare Montparnasse à Deauville, 14200 gare de Deauville-Trouville.carpooling:Paris-Deauville,conducteur:Laure Pop. Départ lundi 19H; Arrivée lundi 22H30. Duree= 3H30, prix= 8 credits, note= 4. Energy: electrique",

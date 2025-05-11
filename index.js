@@ -65,7 +65,7 @@ function showQuestion() {
                 `
                 )
             .join("")}
-            <button type="button" onclick="submitAnswer()">Participer</button>
+            <button class="participate" type="button" onclick="submitAnswer()">Participer</button>
         </form>
         `
         }else{
@@ -108,7 +108,7 @@ function showFinalResult() {
     const quizContainer = document.getElementById("quiz-container")
     quizContainer.innerHTML = `
     <div id="result">
-    <p>Pour réserver{score}1 place, vous devez vous connecter.</p>
+    <p>Pour réserver 1 place, vous devez vous connecter.</p>
     </div>
     `
 }
