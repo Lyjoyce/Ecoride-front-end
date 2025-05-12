@@ -67,37 +67,44 @@
                 </div>
                 <div class="rod">
                     <label for="password"></label>
-                    <input type="password" id="password" name="password"  autocomplete="current-password" placeholder="Create passeword" 
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}" 
-                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 14 or more characters" required="">
+                    <input type="password" id="password" name="password" autocomplete="current-password"
+                        placeholder="Create passeword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 14 or more characters"
+                        required="">
                 </div>
                 <div class="rod">
                     <label for="password"></label>
-                    <input type="password" placeholder="Confirm password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}" 
-                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 14 or more characters" required=""> 
+                    <input type="password" placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 14 or more characters"
+                        required="">
                 </div>
-
             </div>
             <div>
-
                 <button type="button" onclick="registerUser()" class="submit">S'inscrire</button>
-
             </div>
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>14 characters</b></p>
+            </div>
+
             <div class="mdp_oublie"><a href="register.html">Mot de pass oublié</a> </div>
+
+            <p class="form_paraph">Vous avez déjà un compte? <a href="login.html" class="formlink">Se connecter</a></p>
         </form>
-        <p class="form_paraph">Vous avez déjà un compte? <a href="login.html" class="formlink">Se connecter</a></p>
-        
+
     </main>
 
     <footer>
         <img src="/images/logo_footer.png" class="logo_ecoride" alt="logo_ecoride">
-    <div class="footerlink">
-        <a class="footera">ecoride@gmail.com</a>
-        <a  class="footera">Mentions légales</a>
-        <a  class="footera">Avis</a>
-    </div>
-</footer>
+        <div class="footerlink">
+            <a class="footera">ecoride@gmail.com</a>
+            <a class="footera">Mentions légales</a>
+            <a class="footera">Avis</a>
+        </div>
+    </footer>
 
     <script src="register.js"></script>
 </body>
