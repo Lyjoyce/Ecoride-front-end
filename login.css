@@ -8,7 +8,7 @@ body{
     flex-direction: column;
 }
 header{
-    border-bottom: #26116A;
+    border-bottom: #26116A solid 1px;
     padding-right: 10px;
 }
 .banniere-logo{
