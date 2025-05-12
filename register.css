@@ -8,12 +8,14 @@ body{
     flex-direction: column;
 }
 header{
-    background-color: #98c433;
+    border-bottom:#26116A solid 1px;
     padding-right: 10px;
 }
 .banniere-logo{
     display: flex;
     justify-content: center;
+    background-color: #98c433;
+    border: #98c433 solid 2px;
     font-family: cursive;
 }
 .logo_ecoride{
@@ -46,6 +48,10 @@ header{
     margin-right: 15px;
     font-weight: bolder;
 }
+#credits-display{
+    margin-left: 10px;
+    font-weight: bold;
+}
 #logout-btn{
     background-color: white;
     border: none;
@@ -55,16 +61,10 @@ header{
     padding: 5px;
 }
 #logout-btn:hover{
-    background-color:#260401;
+    background-color:#26116A;
     color: white;
 }
-.ecoriders{
-    background-color: #639e3f;
-    border-radius: 5px;
-    border: solid 1px black;
-    box-shadow: 0 1px 0 0 ;
-    cursor: pointer;
-}
+
 .btn_menu{
     height: 20px;
     width: 20px;
@@ -124,7 +124,6 @@ nav{
     justify-items: center;
     justify-content: space-around;
     align-items: center;
-    border: solid 2px #639e3f;
     position:absolute;
     margin-top: -15px;
 }
@@ -156,7 +155,7 @@ a{
 
 main{
     padding: 10px;
-    background-color: #639e3f;
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,7 +164,6 @@ main{
 .card{
     margin-top: 20px;
     height: 400px;
-    background-color: #98c433;
     border-radius: 5px;
     padding: 5px;
     display: flex;
@@ -188,15 +186,21 @@ input{
 
 .submit{
     width: 260px;
-    height: 30px;
+    height: 40px;
     margin: 20px;
     border-radius: 100px;
+    font-size: medium;
     background: #ff3e3e;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     cursor: pointer;
+}
+.submit:hover{
+    background-color: #98c433;
+    font-size: large;
+    font-weight: bolder;
 }
 .message{
     margin-top: 20px;
@@ -222,31 +226,10 @@ input{
     border: solid 2px white;
     border-radius: 70px;
     margin: 20px;
-    background-color:#260401;
+    background-color:#26116A;
 }
 .mdp_oublie :hover{
    text-decoration: underline;
-}
-.card_info{
-    margin-top: 100px;
-    height: 100px;
-    width: 300px;
-    background-color: #98c433;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.rod_infoplus{
-    height: 30px;
-    width: 130px;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    font-size: medium;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 footer{

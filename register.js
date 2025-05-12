@@ -10,11 +10,10 @@ function escapeHtml(text) {
 }
 
 async function registerUser(){
-    const firstname= document.getElementById("firstname").value
-    const lastname= document.getElementById("lastname").value
-    const email= document.getElementById("email").value
-    const password= document.getElementById("password").value
-    
+    const firstname = document.getElementById("firstname").value
+    const lastname = document.getElementById("lastname").value
+    const email = document.getElementById("email").value
+    const password = document.getElementById("password").value
 
     const url = "http://localhost:8081/api/v1/actor/addNewActor"
 
@@ -26,6 +25,7 @@ async function registerUser(){
                 lastname : lastname,
                 email : email,
                 password : password,
+                credits: 20
             }
 
             const response = await fetch(url, {
@@ -53,85 +53,68 @@ async function registerUser(){
                 alert("Veuillez remplir tous les champs")
             }
         }
-//////////
-/* corriger chatGPT REGISTER USER
+//
 function showUserMenu(firstname) {
     const firstnameDisplay = document.getElementById("actorname-display");
     if (firstnameDisplay) {
         firstnameDisplay.textContent = escapeHtml(firstname);
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const storedFirstname = localStorage.getItem("firstname");
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-
-    if (storedFirstname && isAuthenticated === "true") {
-        showUserMenu(storedFirstname);
-    } else {
-        window.location.href = "login.html";
-    }
-
-    const logoutBtn = document.getElementById("logout-btn");
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            localStorage.clear(); // Tout supprimer
-            window.location.href = "login.html";
-        });
-    }
-});
-/////AFFICHER PRENOM
-function showUserMenu(firstname) {
-    const firstnameDisplay = document.getElementById("actorname-display");
-    if (firstnameDisplay) {
-        firstnameDisplay.textContent = escapeHtml(firstname);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const storedFirstname = localStorage.getItem("firstname");
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-
-    if (storedFirstname && isAuthenticated === "true") {
-        showUserMenu(storedFirstname);
-    } else {
-        window.location.href = "login.html";
-    }
-
-    const logoutBtn = document.getElementById("logout-btn");
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            localStorage.clear(); // Tout supprimer
-            window.location.href = "login.html";
-        });
-    }
-});
-
-*/
 /*
-        function showUserMenu(firstname){
-            const firstnameDisplay= document.getElementById("actorname-display")
-            actornameDisplay.textContent= firstname
-        }
-        //Unefois le DOM chargé, la fonction récupère l'username dans le localStorage
-        document.addEventListener("DOMContentLoaded", function() /*()=>*/ 
-        /*{
-            const storedFirstname= localStorage.getItem("firstname")
-            const isAuthenticated = localStorage.getItem("isAuthenticated")
-            if (storedFirstname && isAuthenticated === "true"){
-                showUserMenu(storedFirstname)
-            }else {
-                window.location.href= "login.html"
-            }
-        })
-        
+document.addEventListener("DOMContentLoaded", () => {
+    const storedFirstname = localStorage.getItem("firstname");
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+
+    if (storedFirstname && isAuthenticated === "true") {
+        showUserMenu(storedFirstname);
+    } else {
+        window.location.href = "login.html";
+    }
+
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            localStorage.clear(); // Tout supprimer
+            window.location.href = "login.html";
+        });
+    }
+});
+//AFFICHER
+function showUserMenu(firstname) {
+    const firstnameDisplay = document.getElementById("actorname-display");
+    if (firstnameDisplay) {
+        firstnameDisplay.textContent = escapeHtml(firstname);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const storedFirstname = localStorage.getItem("firstname");
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+
+    if (storedFirstname && isAuthenticated === "true") {
+        showUserMenu(storedFirstname);
+    } else {
+        window.location.href = "login.html";
+    }
+
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            localStorage.clear(); // Tout supprimer
+            window.location.href = "login.html";
+        });
+    }
+});
+
+
+/*
+
         document.getElementById("logout-btn").addEventListener("click", function(){
             localStorage.removeItem("firstname")
             localStorage.removeItem("password")
             localStorage.setItem("isAuthenticated", false)
             window.location.href= "login.html"
         })
-        
 
         /*localStorage fonctionne avec clé,valeur
         localStorage.setItem("firstname", firstname)
