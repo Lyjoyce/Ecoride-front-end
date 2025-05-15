@@ -9,15 +9,20 @@ function escapeHtml(text) {
     return text.replace(/[&<>"']/g, (m) => map[m])
 }
 
-async function registerUser(){
-    const firstname = document.getElementById("firstname").value
-    const lastname = document.getElementById("lastname").value
-    const email = document.getElementById("email").value
-    const password = document.getElementById("password").value
+document.getElementById("register-form").addEventListener("submit", async function(event) {
+    event.preventDefault(); 
 
-   const url = "http://localhost:8081/api/v1/actor/addNewActor"
+    const firstname = document.getElementById("firstname").value.trim();
+    const lastname = document.getElementById("lastname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-    if(firstname&&lastname&&email&&password){
+    if (!firstname || !lastname || !email || !password) {
+        alert("Veuillez remplir tous les champs.");
+        return;
+    }
+
+        const url = "http://localhost:8081/api/v1/actor/addNewActor";
 
         try{
             const userData = {
@@ -26,7 +31,7 @@ async function registerUser(){
                 email : email,
                 password : password,
                 credits: 20
-            }
+            };
             console.log("Mot de passe saisi :", password);
             console.log("Payload envoyé :", userData);
 
@@ -34,7 +39,7 @@ async function registerUser(){
                 method : "POST",
                 headers : {"Content-Type" : "application/json"},
                 body : JSON.stringify(userData)
-            })
+            });
 
             if(response.ok){
                 const data = await response.json()
@@ -51,10 +56,11 @@ async function registerUser(){
                 console.log("Une erreur s'est produite :", error)
                 alert("Une erreur inattendue s'est produite. Veuiller recommencer.")
             }
-            }else{
+        });
+           /* }else{
                 alert("Veuillez remplir tous les champs")
             }
-        }
+        }*/
 
 function showUserMenu(firstname) {
     const firstnameDisplay = document.getElementById("actorname-display");
