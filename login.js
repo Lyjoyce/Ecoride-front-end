@@ -1,36 +1,39 @@
-
 function escapeHtml(text) {
     const map = {
         '&': '&amp;',
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
-        "'": '&#039;'
-    }
-    return text.replace(/[&<>"']/g, (m) => map[m])
+        "'": '&#039;',
+    };
+    return text.replace(/[&<>"']/g, (m) => map[m]);
 }
+
 async function login() {
-    const email = document.getElementById("login-email").value;
+    const firstname = document.getElementById("firstname").value.trim();
+    const lastname = document.getElementById("lastname").value.trim();
+    const email = document.getElementById("login-email").value.trim();
     const password = document.getElementById("login-password").value;
 
-    if (!email || !password) {
+    if (!firstname || !lastname || !email || !password) {
         alert("Veuillez remplir tous les champs.");
         return;
     }
 
     try {
-        console.log("Tentative de connexion avec :", email, password);
+        console.log("Tentative de connexion avec :", firstname, lastname, email);
 
         const response = await fetch("http://localhost:8081/api/v1/actor/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password })
+            body: JSON.stringify({ firstname, lastname, email, password }),
         });
 
         if (response.ok) {
             const actor = await response.json();
 
             localStorage.setItem("firstname", actor.firstname);
+            localStorage.setItem("lastname", actor.lastname || lastname);
             localStorage.setItem("credits", actor.credits);
             localStorage.setItem("isAuthenticated", "true");
 
@@ -44,6 +47,12 @@ async function login() {
         alert("Une erreur réseau s'est produite.");
     }
 }
+
+document.getElementById("login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    login();
+});
+
 
 function showUserMenu(firstname) {
     const firstnameDisplay = document.getElementById("actorname-display");
@@ -59,8 +68,21 @@ function checkAuth() {
         window.location.href = "login.html";
     }
 }
-document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    login(); 
-});
 
+//  Déconnexion
+/*
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            localStorage.clear(); // Tout supprimer
+            window.location.href = "login.html";
+        });
+    }
+
+        document.getElementById("logout-btn").addEventListener("click", function(){
+            localStorage.removeItem("firstname")
+            localStorage.removeItem("password")
+            localStorage.setItem("isAuthenticated", false)
+            window.location.href= "login.html"
+        })
+   */
