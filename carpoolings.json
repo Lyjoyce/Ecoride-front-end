@@ -37,6 +37,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "1",
+      "credits":"20",
       "voiture": ""
     },
     {
@@ -80,9 +81,11 @@
       "note": "5",
       "nbplaces": "3",
       "seatdispo": "3",
+      "credits":"20",
       "voiture": ""
     },
     {
+      "question": "Les détails du covoiturage vers la région : Centre-Val de Loire",
       "pays":"France",
       "region":"Centre-Val de Loire",
       "itinerary":"Paris-Amboise",
@@ -121,6 +124,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "",
+      "credits":"20",
       "voitures": ""
     },
     {
@@ -164,6 +168,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "",
+       "credits":"20",
       "voitures": ""
     },
     {
@@ -207,6 +212,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "2",
+       "credits":"20",
       "voiture": ""
     },
     { 
@@ -250,12 +256,11 @@
       "note": "5",
       "nbplaces": "3",
       "seatdispo": "1",
+       "credits":"20",
       "voiture": ""
     },
-
-
     {
-      "question": "Les détails du covoiturage vers la région : Centre-Val de Loire",
+      "question": "Les détails du covoiturage vers la région : Bretagne",
       "pays":"France",
       "region":"Bretagne",
       "itinerary":"Paris-Rennes",
@@ -295,6 +300,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "3",
+       "credits":"20",
       "voiture": ""
     },
      {
@@ -329,6 +335,7 @@
               "note": "4",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
 
@@ -373,6 +380,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "2",
+       "credits":"20",
       "voiture": ""
     },
 
@@ -417,6 +425,7 @@
       "note": "4",
       "nbplaces": "3",
       "seatdispo": "",
+       "credits":"20",
       "voitures": ""
     },
     {
@@ -459,6 +468,7 @@
       "note": "5",
       "nbplaces": "3",
       "seatdispo": "2",
+       "credits":"20",
       "voiture": ""
     },
 
@@ -502,6 +512,7 @@
           "note": "5",
           "nbplaces": "3",
           "seatdispo": "3",
+           "credits":"20",
           "voiture": ""
         },
 
@@ -545,6 +556,7 @@
           "note": "5",
           "nbplaces": "3",
           "seatdispo": "2",
+           "credits":"20",
           "voiture": ""
         },
         {
@@ -587,6 +599,7 @@
           "note": "5",
           "nbplaces": "3",
           "seatdispo": "2",
+           "credits":"20",
           "voiture": ""
         },
         {
@@ -629,6 +642,7 @@
           "note": "4",
           "nbplaces": "3",
           "seatdispo": "2",
+           "credits":"20",
           "voiture": ""
         },
         {
@@ -671,6 +685,7 @@
           "note": "5",
           "nbplaces": "3",
           "seatdispo": "1",
+           "credits":"20",
           "voiture": ""
         },
 
@@ -714,6 +729,7 @@
               "note": "5",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
             {
@@ -747,6 +763,7 @@
               "note": "4",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
             {
@@ -780,6 +797,7 @@
               "note": "5",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
             {
@@ -813,6 +831,7 @@
               "note": "4",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
             {
@@ -846,6 +865,7 @@
               "note": "3",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
             {
@@ -879,6 +899,7 @@
               "note": "4",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             },
             {
@@ -912,6 +933,7 @@
               "note": "5",
               "nbplaces": "3",
               "seatdispo": "",
+               "credits":"20",
               "voitures": ""
             }
 

@@ -15,7 +15,7 @@ async function registerUser(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
 
-    const url = "http://localhost:8081/api/v1/actor/addNewActor"
+   const url = "http://localhost:8081/api/v1/actor/addNewActor"
 
     if(firstname&&lastname&&email&&password){
 
@@ -27,6 +27,8 @@ async function registerUser(){
                 password : password,
                 credits: 20
             }
+            console.log("Mot de passe saisi :", password);
+            console.log("Payload envoyé :", userData);
 
             const response = await fetch(url, {
                 method : "POST",
@@ -53,7 +55,7 @@ async function registerUser(){
                 alert("Veuillez remplir tous les champs")
             }
         }
-//
+
 function showUserMenu(firstname) {
     const firstnameDisplay = document.getElementById("actorname-display");
     if (firstnameDisplay) {
@@ -116,10 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href= "login.html"
         })
 
-        /*localStorage fonctionne avec clé,valeur
-        localStorage.setItem("firstname", firstname)
-        localStorage.setItem("lastname", lastname)
-        localStorage.setItem("email", email)
-        localStorage.setItem("password", password)
+        
    */
 
