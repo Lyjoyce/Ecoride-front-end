@@ -2,62 +2,58 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Login Ecoride</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="login.css" />
+  <title>Connexion - Ecoride</title>
 </head>
 
 <body>
-    <header>
-        <div>
-            <div class="banniere-logo">
-                <img src="images/logo1.png" class="logo_ecoride" alt="logo_ecoride">
-            </div>
-            <div class="myself">
-                <div>
-                    <div class="showFirstnameMenu appbar">
-                        <div class="firstname-menu">
-                            <span id="firstname-display"></span>
-                            <span id="credits-display"></span>
-                            <button id="logout-btn">Se déconnecter</button>
-                        </div>
+  <header>
+    <div class="banniere-logo">
+      <img src="images/logo1.png" class="logo_ecoride" alt="Logo Ecoride" />
+    </div>
 
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn btn_menu">
-                        <img src="icons/icon_menu.png" class="icon_menu" alt="icon_menu">
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="details.html">covoiturages</a>
-                        <a href="contact.html">contact</a>
-                        <a href="login.html">connection</a>
-                        <a href="login.html">déconnection</a>
-                    </div>
-                </div>
-            </div>
+    <div class="myself">
+      <div class="appbar showFirstnameMenu">
+        <div class="firstname-menu">
+          <span id="firstname-display"></span>
+          <span id="credits-display"></span>
+          <button id="logout-btn">Se déconnecter</button>
         </div>
-        <div class="headnav">
-            <nav>
-                <a href="index.html" class="ahome">
-                    <img src="icons/icon_arrow_back.png" class="arrow_back" alt="">
-                    Home</a>
-                <a href="register.html" class="acreer_uncompte">Créer un compte</a>
-                <a href="login.html" class="alogin">Login</a>
-            </nav>
-        </div>
-    </header>
+      </div>
 
-        <main>
+      <div class="dropdown">
+        <button class="dropbtn btn_menu" aria-label="Menu utilisateur">
+          <img src="icons/icon_menu.png" class="icon_menu" alt="Menu" />
+        </button>
+        <div class="dropdown-content">
+          <a href="details.html">Covoiturages</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Connexion</a>
+          <a href="#" id="logout-btn">Déconnexion</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="headnav">
+      <a href="index.html" class="ahome">
+        <img src="icons/icon_arrow_back.png" class="arrow_back" alt="Retour" /> Accueil
+      </a>
+      <a href="register.html" class="acreer_uncompte">Créer un compte</a>
+      <a href="login.html" class="alogin">Connexion</a>
+    </nav>
+  </header>
+
+  <main>
     <form id="login-form" class="formulaire">
       <div class="card">
         <div class="rod">
-          <label for="login-email"></label>
+          <label for="login-email">Email :</label>
           <input type="email" id="login-email" name="email" placeholder="Entrez votre email" required />
         </div>
         <div class="rod">
-          <label for="login-password"></label>
+          <label for="login-password">Mot de passe :</label>
           <input type="password" id="login-password" name="password" autocomplete="current-password"
             placeholder="Entrez votre mot de passe" required />
         </div>
@@ -77,15 +73,16 @@
     </form>
   </main>
 
-    <footer>
-        <img src="images/logo_footer.png" class="logo_ecoride" alt="logo_ecoride">
-        <div class="footerlink">
-            <a class="footera">ecoride@gmail.com</a>
-            <a class="footera">Mentions légales</a>
-            <a class="footera">Avis</a>
-        </div>
-    </footer>
-    <script src="login.js"></script>
+  <footer>
+    <img src="images/logo_footer.png" class="logo_ecoride" alt="Logo Ecoride" />
+    <div class="footerlink">
+      <a href="mailto:ecoride@gmail.com" class="footera">ecoride@gmail.com</a>
+      <a href="#" class="footera">Mentions légales</a>
+      <a href="#" class="footera">Avis</a>
+    </div>
+  </footer>
+
+  <script src="login.js"></script>
 </body>
 
 </html>

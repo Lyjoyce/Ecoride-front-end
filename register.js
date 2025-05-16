@@ -17,7 +17,7 @@ document.getElementById("register-form").addEventListener("submit", async functi
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
-    // Validation de base
+    
     if (!firstname || !lastname || !email || !password) {
         alert("Veuillez remplir tous les champs.");
         return;

@@ -108,12 +108,13 @@ header{
 .headnav{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 nav{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     width: 250px;
-    height: 30px;
+    height: 50px;
     background-color: #26116A;
     display: flex;
     justify-items: center;
@@ -216,7 +217,7 @@ input{
     text-decoration-line: underline;
 }
 .mdp_oublie{
-    width: 130px;
+    width: 140px;
     height: 20px;
     padding: 10px;
     border: solid 2px white;
