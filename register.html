@@ -2,53 +2,53 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/register.css">
-    <title>Register Ecoride</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/register.css">
+  <title>Register Ecoride</title>
 </head>
 
 <body>
-    <header>
+  <header>
+    <div>
+      <div class="banniere-logo">
+        <img src="/images/logo1.png" class="logo_ecoride" alt="logo_ecoride">
+      </div>
+      <div class="myself">
         <div>
-            <div class="banniere-logo">
-                <img src="/images/logo1.png" class="logo_ecoride" alt="logo_ecoride">
+          <div class="appbar">
+            <div class="actorname-menu">
+              <span id="actorname-display"></span>
+              <span id="credits-display"></span>
+              <button id="logout-btn">Se déconnecter</button>
             </div>
-            <div class="myself">
-                <div>
-                    <div class="appbar">
-                        <div class="actorname-menu">
-                            <span id="actorname-display"></span>
-                            <span id="credits-display"></span>
-                            <button id="logout-btn">Se déconnecter</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn btn_menu">
-                        <img src="/icons/icon_menu.png" class="icon_menu" alt="icon_menu">
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="details.html">covoiturages</a>
-                        <a href="contact.html">contact</a>
-                        <a href="login.html">connection</a>
-                        <a href="login.html">déconnection</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="headnav">
-            <nav>
-                <a href="index.html" class="ahome">
-                    <img src="icons/icon_arrow_back.png" class="arrow_back" alt="">
-                    Home</a>
-                <a href="register.html" class="acreer_uncompte">Créer un compte</a>
-                <a href="login.html" class="alogin">Login</a>
-            </nav>
+        <div class="dropdown">
+          <button class="dropbtn btn_menu">
+            <img src="/icons/icon_menu.png" class="icon_menu" alt="icon_menu">
+          </button>
+          <div class="dropdown-content">
+            <a href="details.html">covoiturages</a>
+            <a href="contact.html">contact</a>
+            <a href="login.html">connexion</a>
+            <a href="login.html">déconnexion</a>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+    <div class="headnav">
+      <nav>
+        <a href="index.html" class="ahome">
+          <img src="icons/icon_arrow_back.png" class="arrow_back" alt="">
+          Accueil</a>
+        <a href="register.html" class="acreer_uncompte">Créer un compte</a>
+        <a href="login.html" class="alogin">Connexion</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
+  <main>
     <form id="register-form" class="formulaire">
       <div class="card">
         <div class="rod">
@@ -66,10 +66,8 @@
         <div class="rod">
           <label for="password"></label>
           <input type="password" id="password" name="password" autocomplete="new-password"
-            placeholder="Créer un mot de passe"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}"
-            title="Doit contenir au moins une majuscule, une minuscule, un chiffre et 14 caractères minimum"
-            required />
+            placeholder="Créer un mot de passe" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}"
+            title="Doit contenir au moins une majuscule, une minuscule, un chiffre et 14 caractères minimum" required />
         </div>
       </div>
 
@@ -96,16 +94,16 @@
     </form>
   </main>
 
-    <footer>
-        <img src="/images/logo_footer.png" class="logo_ecoride" alt="logo_ecoride">
-        <div class="footerlink">
-            <a class="footera">ecoride@gmail.com</a>
-            <a class="footera">Mentions légales</a>
-            <a class="footera">Avis</a>
-        </div>
-    </footer>
+  <footer>
+    <img src="/images/logo_footer.png" class="logo_ecoride" alt="logo_ecoride">
+    <div class="footerlink">
+      <a href="mailto:ecoride@gmail.com" class="footera">ecoride@gmail.com</a>
+      <a class="footera">Mentions légales</a>
+      <a class="footera">Avis</a>
+    </div>
+  </footer>
 
-    <script src="register.js"></script>
+  <script src="register.js"></script>
 </body>
 
 </html>
