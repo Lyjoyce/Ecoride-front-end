@@ -183,6 +183,13 @@ input{
     padding: 2px;
     cursor: pointer;
 }
+.valid {
+  color: #98c433;
+}
+
+.invalid {
+  color: #ff3e3e;
+}
 
 .submit{
     width: 260px;

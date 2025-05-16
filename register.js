@@ -70,3 +70,45 @@ function showUserMenu(firstname) {
         firstnameDisplay.textContent = escapeHtml(firstname);
     }
 }
+
+const passwordInput = document.getElementById("password");
+const letter = document.getElementById("letter");
+const capital = document.getElementById("capital");
+const number = document.getElementById("number");
+const length = document.getElementById("length");
+
+passwordInput.addEventListener("input", function () {
+    const value = passwordInput.value;
+
+    if (/[a-z]/.test(value)) {
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+    } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+
+    if (/[A-Z]/.test(value)) {
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+    } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+    }
+
+    if (/\d/.test(value)) {
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+    } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+    }
+
+    if (value.length >= 14) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+    }
+});
