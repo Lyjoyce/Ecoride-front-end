@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Recherche un covoiturage </title>
+</head>
+<body>
+
+  <article>
+  <h2>Rechercher un covoiturage </h2>
+
+  <form id="searchForm">
+    <label for="fromCity">Ville de départ :</label>
+    <input type="text" id="fromCity" name="fromCity" required><br><br>
+
+    <label for="toCity">Ville d'arrivée :</label>
+    <input type="text" id="toCity" name="toCity" required><br><br>
+
+    <label for="departureDate">Jour de départ :</label>
+    <input type="date" id="departureDate" name="departureDate"><br><br>
+
+    <label for="departureTime">Heure de départ :</label>
+    <input type="datetime-local" id="departureTime" name="departureTime"><br><br>
+
+    <label for="arrivalDate">Jour d'arrivée :</label>
+    <input type="date" id="arrivalDate" name="arrivalDate"><br><br>
+
+    <label for="arrivalTime">Heure d'arrivée :</label>
+    <input type="datetime-local" id="arrivalTime" name="arrivalTime"><br><br>
+
+    <div> AM = Ante Meridiem (avant midi) — de minuit à midi (00:00 à 11:59)
+
+PM = Post Meridiem (après midi) — de midi à minuit (12:00 à 23:59)</div><br>
+
+    <button type="submit">Rechercher</button>
+  </form>
+
+  <div id="result"></div>
+</article>
+<script src="/search.js"></script>
+
+</body>
+</html>

@@ -55,7 +55,6 @@ if (loginForm) {
   });
 }
 
-
 function showUserMenu(firstname) {
   const firstnameDisplay = document.getElementById("actorname-display");
   if (firstnameDisplay) {

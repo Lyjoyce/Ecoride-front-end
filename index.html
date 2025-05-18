@@ -32,7 +32,7 @@
                         <img src="icons/icon_menu.png" class="icon_menu" alt="icon_menu">
                     </button>
                     <div class="dropdown-content">
-                        <a href="details.html">covoiturages</a>
+                        <a href="criteres.html">covoiturages</a>
                         <a href="contact.html">contact</a>
                         <a href="login.html">connexion</a>
                         <a href="login.html">déconnexion</a>
@@ -62,52 +62,46 @@
         </article>
 
         <article class="center">
+            <h2 class="rod_presentation_itinerary">Rechercher un covoiturage</h2>
+
+            <form id="searchForm">
+                <label for="fromCity">Ville de départ :</label>
+                <input type="text" id="fromCity" name="fromCity" required><br><br>
+
+                <label for="toCity">Ville d'arrivée :</label>
+                <input type="text" id="toCity" name="toCity" required><br><br>
+
+                <label for="departureDate">Jour de départ :</label>
+                <input type="date" id="departureDate" name="departureDate"><br><br>
+
+                <label for="departureTime">Heure de départ :</label>
+                <!-- correction : datetime-local remplacé par time -->
+                <input type="time" id="departureTime" name="departureTime"><br><br>
+
+                <label for="arrivalDate">Jour d'arrivée :</label>
+                <input type="date" id="arrivalDate" name="arrivalDate"><br><br>
+
+                <label for="arrivalTime">Heure d'arrivée :</label>
+                <!-- correction : datetime-local remplacé par time -->
+                <input type="time" id="arrivalTime" name="arrivalTime"><br><br>
+
+                <p>
+                    <strong>AM</strong> = Ante Meridiem (avant midi) — de 00:00 à 11:59<br>
+                    <strong>PM</strong> = Post Meridiem (après midi) — de 12:00 à 23:59
+                </p><br>
+
+                <button type="submit" class="search">Rechercher</button>
+            </form>
+            <div id="result"></div>
+        </article>
+
+        <article class="critere">
             <div class="rod_presentation_itinerary">
-                <h2>Trouver mon itinéraire</h2>
-            </div>
-        
-            <div>
-                <div class="dropdown">
-                    <h3 class="rod-dep">De Paris : Ile-de-France </h3>
-                    <div class="dropdown-content">
-                        <a href="parisgaremontparnasse.html">Paris gare Montparnasse</a>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="container">
-                <div class="region-selection">
-                    <h3>Choisissez votre région</h3>
-                    <button class="region-btn" data-level="Bretagne">Bretagne</button>
-                    <button class="region-btn" data-level="Centre-Val de Loire">Centre-Val de Loire</button>
-                    <button class="region-btn" data-level="Normandie">Normandie</button>
-                </div>
-        
-                <div id="quiz-container" class="hidden"></div>
-                <div id="result"></div>
+                <h3>Critères du premier trajet trouvé :</h3>
+                <pre id="critere"></pre>
             </div>
         </article>
 
-        <article class="center preferences">
-            <div class="note-container">
-                 <div class="rod_presentation_itinerary">
-                        <h2>Sélectionner mes préférences</h2>
-                    </div>
-               
-                <div class="note-selection">
-                    <div>
-                        <h3>Choisissez votre conducteur par sa note :</h3>
-                    </div>
-        
-                    <button class="note-btn" data-level="3">3</button>
-                    <button class="note-btn" data-level="4">4</button>
-                    <button class="note-btn" data-level="5">5</button>
-                </div>
-        
-                <div id="notefilter-container" class="hidden"></div>
-            </div>
-        </article>
-      
     </main>
 
     <footer>
@@ -119,7 +113,7 @@
         </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="search.js"></script>
 </body>
 
 </html>
