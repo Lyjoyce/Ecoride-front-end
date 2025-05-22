@@ -21,12 +21,17 @@ Elle utilise :
 
 
 ## Configuration
-
 ### Ports & Application
-
 - Le serveur tourne sur le port `8082` (modifiable dans `application.properties`).  
 - Nom de l’application : `ecoRideApi`.
-
 ### Base de données MySQL
-
 - URL de connexion :  
+
+# Mentions légales
+Ce projet est développé par Sabrina L.
+Voir le fichier [MENTIONS_LEGALES](legacy_privacy.html) pour plus d'informations.
+
+# Politique de confidentialité
+Pour consulter la politique de confidentialité, veuillez lire le fichier POLITIQUE_CONFIDENTIALITE  **[POLITIQUE_CONFIDENTIALITE](legacy_privacy.html)**
+
+Merci d'utiliser ecoRideApi !

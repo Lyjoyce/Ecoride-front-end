@@ -228,6 +228,10 @@ input{
 .mdp_oublie :hover{
    text-decoration: underline;
 }
+.bluelink{
+    color: #26116A;
+    text-decoration: underline #26116A solid;
+}
 
 footer{
     font-family: 'Times New Roman', Times, serif;
