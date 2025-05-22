@@ -1,0 +1,12 @@
+{
+  "conducteur": "Jean Dupont",
+  "immatriculation": "AB-123-CD",
+  "date1ereimmatriculation": "2020-06-01",
+  "marque": "Tesla",
+  "modele": "Model 3",
+  "couleur": "Noir",
+  "energy": "Électrique",
+  "options": ["Autopilot", "Toit panoramique"],
+  "ecologique": true,
+  "roleName": "ROLE_CONDUCTEUR"
+}
