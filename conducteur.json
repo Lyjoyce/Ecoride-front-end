@@ -1,0 +1,38 @@
+[
+    {
+        "firstname": "Nicolas",
+        "name": "Benoit",
+        "email": "nicolas.benoit@example.com",
+        "password": "nicolasCond01",
+        "tel": "0612345679",
+        "photo": "nicolas.jpg",
+        "roleName": "ROLE_CONDUCTEUR"
+    },
+    {
+        "firstname": "Claire",
+        "name": "Marchand",
+        "email": "claire.marchand@example.com",
+        "password": "claireCond02",
+        "tel": "0623456790",
+        "photo": "claire.jpg",
+        "roleName": "ROLE_CONDUCTEUR"
+    },
+    {
+        "firstname": "Julien",
+        "name": "Giraud",
+        "email": "julien.giraud@example.com",
+        "password": "julienCond03",
+        "tel": "0634567901",
+        "photo": "julien.jpg",
+        "roleName": "ROLE_CONDUCTEUR"
+    },
+    {
+        "firstname": "Élodie",
+        "name": "Baron",
+        "email": "elodie.baron@example.com",
+        "password": "elodieCond04",
+        "tel": "0645679012",
+        "photo": "elodie.jpg",
+        "roleName": "ROLE_CONDUCTEUR"
+    }
+]

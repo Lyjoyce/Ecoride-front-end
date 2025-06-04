@@ -1,0 +1,20 @@
+[
+    {
+        "firstname": "Antoinette",
+        "name": "Perrot",
+        "email": "antoinette.perrot@example.com",
+        "password": "antoinetteWorker01",
+        "tel": "0656790123",
+        "photo": "antoinette.jpg",
+        "roleName": "ROLE_EMPLOYE"
+    },
+    {
+        "firstname": "David",
+        "name": "Lemoine",
+        "email": "david.lemoine@example.com",
+        "password": "davidpass321",
+        "tel": "0645678901",
+        "photo": "david.jpg",
+        "roleName": "ROLE_EMPLOYE"
+    }
+]

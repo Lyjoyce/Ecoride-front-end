@@ -1,0 +1,75 @@
+[
+    {
+        "firstname": "Léa",
+        "name": "Moreau",
+        "email": "lea.moreau@example.com",
+        "password": "leaPass01",
+        "tel": "0667890123",
+        "photo": "lea.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+    {
+        "firstname": "Thomas",
+        "name": "Renard",
+        "email": "thomas.renard@example.com",
+        "password": "thomasPass02",
+        "tel": "0678901234",
+        "photo": "thomas.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+    {
+        "firstname": "Sophie",
+        "name": "Leroy",
+        "email": "sophie.leroy@example.com",
+        "password": "sophiePass03",
+        "tel": "0689012345",
+        "photo": "sophie.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+    {
+        "firstname": "Lucas",
+        "name": "Colin",
+        "email": "lucas.colin@example.com",
+        "password": "lucasPass04",
+        "tel": "0690123456",
+        "photo": "lucas.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+    {
+        "firstname": "Camille",
+        "name": "Fabre",
+        "email": "camille.fabre@example.com",
+        "password": "camillePass05",
+        "tel": "0601234567",
+        "photo": "camille.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+     {
+        "firstname": "Bob",
+        "name": "Martin",
+        "email": "bob.martin@example.com",
+        "password": "bobpass456",
+        "tel": "0623456789",
+        "photo": "bob.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+    {
+        "firstname": "Chloé",
+        "name": "Petit",
+        "email": "chloe.petit@example.com",
+        "password": "chloe789",
+        "tel": "0634567890",
+        "photo": "chloe.jpg",
+        "roleName": "ROLE_PASSAGER"
+    },
+    
+    {
+        "firstname": "Emma",
+        "name": "Bernard",
+        "email": "emma.bernard@example.com",
+        "password": "emma456",
+        "tel": "0656789012",
+        "photo": "emma.jpg",
+        "roleName": "ROLE_PASSAGER"
+    }
+]
