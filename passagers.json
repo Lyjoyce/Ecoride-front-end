@@ -1,7 +1,7 @@
 [
     {
         "firstname": "Léa",
-        "name": "Moreau",
+        "lastname": "Moreau",
         "email": "lea.moreau@example.com",
         "password": "leaPass01",
         "tel": "0667890123",
@@ -10,7 +10,7 @@
     },
     {
         "firstname": "Thomas",
-        "name": "Renard",
+        "lastname": "Renard",
         "email": "thomas.renard@example.com",
         "password": "thomasPass02",
         "tel": "0678901234",
@@ -19,7 +19,7 @@
     },
     {
         "firstname": "Sophie",
-        "name": "Leroy",
+        "lastname": "Leroy",
         "email": "sophie.leroy@example.com",
         "password": "sophiePass03",
         "tel": "0689012345",
@@ -28,7 +28,7 @@
     },
     {
         "firstname": "Lucas",
-        "name": "Colin",
+        "lastname": "Colin",
         "email": "lucas.colin@example.com",
         "password": "lucasPass04",
         "tel": "0690123456",
@@ -37,7 +37,7 @@
     },
     {
         "firstname": "Camille",
-        "name": "Fabre",
+        "lastname": "Fabre",
         "email": "camille.fabre@example.com",
         "password": "camillePass05",
         "tel": "0601234567",
@@ -46,7 +46,7 @@
     },
      {
         "firstname": "Bob",
-        "name": "Martin",
+        "lastname": "Martin",
         "email": "bob.martin@example.com",
         "password": "bobpass456",
         "tel": "0623456789",
@@ -55,7 +55,7 @@
     },
     {
         "firstname": "Chloé",
-        "name": "Petit",
+        "lastname": "Petit",
         "email": "chloe.petit@example.com",
         "password": "chloe789",
         "tel": "0634567890",
@@ -65,7 +65,7 @@
     
     {
         "firstname": "Emma",
-        "name": "Bernard",
+        "lastname": "Bernard",
         "email": "emma.bernard@example.com",
         "password": "emma456",
         "tel": "0656789012",

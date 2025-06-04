@@ -1,7 +1,7 @@
 [
     {
         "firstname": "Nicolas",
-        "name": "Benoit",
+        "lastname": "Benoit",
         "email": "nicolas.benoit@example.com",
         "password": "nicolasCond01",
         "tel": "0612345679",
@@ -10,7 +10,7 @@
     },
     {
         "firstname": "Claire",
-        "name": "Marchand",
+        "lastname": "Marchand",
         "email": "claire.marchand@example.com",
         "password": "claireCond02",
         "tel": "0623456790",
@@ -19,7 +19,7 @@
     },
     {
         "firstname": "Julien",
-        "name": "Giraud",
+        "lastname": "Giraud",
         "email": "julien.giraud@example.com",
         "password": "julienCond03",
         "tel": "0634567901",
@@ -28,7 +28,7 @@
     },
     {
         "firstname": "Élodie",
-        "name": "Baron",
+        "lastname": "Baron",
         "email": "elodie.baron@example.com",
         "password": "elodieCond04",
         "tel": "0645679012",

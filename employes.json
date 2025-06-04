@@ -1,7 +1,7 @@
 [
     {
-        "firstname": "Antoinette",
-        "name": "Perrot",
+        "firsname": "Antoinette",
+        "lastname": "Perrot",
         "email": "antoinette.perrot@example.com",
         "password": "antoinetteWorker01",
         "tel": "0656790123",
@@ -10,7 +10,7 @@
     },
     {
         "firstname": "David",
-        "name": "Lemoine",
+        "lastname": "Lemoine",
         "email": "david.lemoine@example.com",
         "password": "davidpass321",
         "tel": "0645678901",
