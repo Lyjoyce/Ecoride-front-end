@@ -1,31 +1,31 @@
 body {
-    padding: 32px;
+    padding: 30px;
 }
 
 form {
-    max-width: 500px;
+    min-width: 320px;
     margin: auto;
     border: 1px solid #98C433;
     border-radius: 10px;
-    padding: 32px;
+    padding: 30px;
 }
 
 label {
     display: block;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 12.8px;
-    margin-top: 48px;
+    width: 95%;
+    padding: 10px;
+    margin-top: 40px;
     border: 1px solid #98C433;
     border-radius: 5px;
 }
 
 button {
-    margin-top: 24px;
-    padding: 12.8px 24px;
+    margin-top: 30px;
+    padding: 12px 24px;
     background-color: #ff3E3E;
     border: none;
     color: black;
@@ -34,5 +34,5 @@ button {
 }
 
 .message {
-    margin-top: 16px;
+    margin-top: 15px;
 }
