@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Employé - Répondre aux messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .dashboard {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #statusMsg {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>📬 Répondre à un contact</h2>
+
+    <div class="dashboard">
+        <label for="contactSelect">Sélectionner un message :</label>
+        <select id="contactSelect"></select>
+
+        <label for="responseText">Votre réponse :</label>
+        <textarea id="responseText" rows="6" placeholder="Écrivez votre réponse ici..."></textarea>
+
+        <button onclick="sendReply()">Envoyer la réponse</button>
+
+        <div id="statusMsg"></div>
+    </div>
+
+    <script>
+        async function loadContacts() {
+            const res = await fetch("http://localhost:8082/api/contacts");
+            const contacts = await res.json();
+
+            const select = document.getElementById("contactSelect");
+            contacts.forEach(contact => {
+                const option = document.createElement("option");
+                option.value = contact.id;
+                option.textContent = `${contact.name} - ${contact.email}`;
+                select.appendChild(option);
+            });
+        }
+
+        async function sendReply() {
+            const contactId = document.getElementById("contactSelect").value;
+            const responseText = document.getElementById("responseText").value;
+
+            const res = await fetch(`http://localhost:8082/api/contacts/${contactId}/repondre`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(responseText)
+            });
+
+            const msg = document.getElementById("statusMsg");
+            if (res.ok) {
+                msg.textContent = "Réponse enregistrée ✅";
+                msg.style.color = "green";
+            } else {
+                msg.textContent = "Erreur lors de l'envoi ❌";
+                msg.style.color = "red";
+            }
+        }
+
+        window.onload = loadContacts;
+    </script>
+</body>
+</html>
