@@ -10,7 +10,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const contactData = { name, email, message };
 
     try {
-        const response = await fetch("http://localhost:8080/api/contacts", {
+        const response = await fetch("http://localhost:8082/api/contacts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
