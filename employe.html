@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Employé</title></head>
+<body>
+  <h2>Valider des avis</h2>
+  <ul id="avisList"></ul>
+
+  <script>
+    async function loadAvis() {
+      const token = localStorage.getItem("token");
+      const res = await fetch("http://localhost:8080/api/v1/avis/non-valides", {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      const avis = await res.json();
+
+      const list = document.getElementById("avisList");
+      avis.forEach(a => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <strong>${a.avis}</strong> (Note: ${a.note})
+          <button onclick="validerAvis(${a.id})">Valider</button>`;
+        list.appendChild(li);
+      });
+    }
+
+    async function validerAvis(id) {
+      const token = localStorage.getItem("token");
+      const res = await fetch(`http://localhost:8080/api/v1/actor/avis/${id}/valider`, {
+        method: "PUT",
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      alert(res.ok ? "Avis validé" : "Erreur");
+      location.reload();
+    }
+
+    loadAvis();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Passager</title></head>
+<body>
+  <h2>Laisser un avis sur un conducteur</h2>
+  <form id="avisForm">
+    <input type="number" id="conducteurId" placeholder="ID Conducteur" required />
+    <input type="number" id="note" min="0" max="5" placeholder="Note sur 5" required />
+    <textarea id="avis" placeholder="Votre avis..." required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <script>
+    document.getElementById("avisForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const token = localStorage.getItem("token");
+      const id = document.getElementById("conducteurId").value;
+      const res = await fetch(`http://localhost:8080/api/v1/actor/${id}/avis`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          note: parseInt(document.getElementById("note").value),
+          avis: document.getElementById("avis").value
+        })
+      });
+      alert(res.ok ? "Avis envoyé pour validation" : "Erreur lors de l'envoi");
+    });
+  </script>
+</body>
+</html>

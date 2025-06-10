@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+  <h2>Bienvenue !</h2>
+  <div id="content">Chargement...</div>
+
+  <script>
+    async function fetchUserData() {
+      const id = localStorage.getItem("id");
+      const token = localStorage.getItem("token");
+
+      const res = await fetch(`http://localhost:8080/api/v1/actor/${id}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+
+      if (res.ok) {
+        const actor = await res.json();
+        const roles = actor.roles.map(r => r.name);
+        if (roles.includes("ROLE_EMPLOYE")) {
+          window.location.href = "employe.html";
+        } else if (roles.includes("ROLE_CONDUCTEUR")) {
+          window.location.href = "conducteur.html";
+        } else {
+          window.location.href = "passager.html";
+        }
+      } else {
+        document.getElementById("content").innerText = "Erreur de chargement.";
+      }
+    }
+
+    fetchUserData();
+  </script>
+</body>
+</html>
