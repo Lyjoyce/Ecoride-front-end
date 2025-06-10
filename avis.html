@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Avis Conducteur</title>
+</head>
+<body>
+    <h1>Avis sur le Conducteur</h1>
+
+    <div>
+        <label>ID du conducteur :</label>
+        <input type="number" id="actorId" value="1">
+        <button onclick="chargerConducteur()">Charger</button>
+    </div>
+
+    <div id="infosConducteur" style="margin-top: 20px;"></div>
+
+    <div style="margin-top: 30px;">
+        <h3>Laisser un avis</h3>
+        <label>Note (0-5) :</label>
+        <input type="number" id="note" min="0" max="5"><br><br>
+        <label>Avis :</label><br>
+        <textarea id="avis" rows="4" cols="50"></textarea><br><br>
+        <button onclick="envoyerAvis()">Envoyer l'avis</button>
+    </div>
+
+    <script src="avis.js"></script>
+</body>
+</html>
