@@ -50,8 +50,8 @@
         </div>
     </header>
 
-    <main>
-        <article class="presentation_ecoride">
+    <main role="main">
+        <section class="presentation_ecoride" role="region" aria-label="Présentation d'Ecoride">
             <div class="pres-row">
                 <h1>COVOITURAGE DES GRANDES VILLES</h1>
                 <img src="images/car_bio.png" class="img_presentation car_bio" alt="car_bio">
@@ -59,9 +59,9 @@
                 <img src="images/car_eco.png" class="img_presentation car_eco" alt="car_eco">
                 <h2 class="txt_eco_slogan">ECOLOGIQUE ECONOMIQUE ECORESPONSABLE</h2>
             </div>
-        </article>
+        </section>
 
-        <article class="center">
+        <section class="center" role="search" aria-label="Recherche de covoiturage">
             <h2 class="rod_presentation_itinerary">Rechercher un covoiturage</h2>
 
             <form id="searchForm">
@@ -107,15 +107,15 @@
 
                 <button type="submit" class="search">Rechercher</button>
             </form>
-            <div id="result"></div>
-        </article>
+            <div id="result" aria-live="polite"></div>
+        </section>
 
-        <article class="critere">
+        <section class="critere" role="region" aria-label="Critères du trajet trouvé">
             <div class="rod_presentation_itinerary">
                 <h3>Critères du premier trajet trouvé :</h3>
-                <pre id="critere"></pre>
+                <pre id="critere" aria-live="polite"></pre>
             </div>
-        </article>
+        </section>
 
     </main>
 
