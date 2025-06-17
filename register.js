@@ -29,7 +29,7 @@ document.getElementById("register-form").addEventListener("submit", async functi
         return;
     }
 
-    const url = "http://localhost:8081/api/v1/actor/addNewActor";
+    const url = "http://localhost:8082/api/v1/actor/addNewActor";
 
     const userData = {
         firstname,

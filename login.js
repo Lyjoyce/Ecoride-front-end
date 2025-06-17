@@ -20,7 +20,7 @@ async function login() {
   }
 
   try {
-    const response = await fetch("http://localhost:8081/api/v1/actor/login", {
+    const response = await fetch("http://localhost:8082/api/v1/actor/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

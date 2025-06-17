@@ -265,7 +265,40 @@ input{
     color: black;
     cursor: pointer;
 }
+.carppol{
+  margin: 20px;  
+}
+#carpooling_propose{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    font-size: large;
+    border-radius: 10px;
+    border: 3px solid #ff3e3e;
+    background-color: #98c433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
 
+#carpooling-form{
+    margin: 30px;
+}
+.publier{
+    width: 70px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #ff3e3e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+
+}
 footer{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
