@@ -10,11 +10,11 @@
     "option": "voyage ecologique",
     "energy": "electrique",
     "conducteur": "Marc Led",
-    "seatdispo": "1",
+    "seatAvailable": "1",
     "price": "6 credits",
     "note": "4",
     "duree": "2H00",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Rouen",
@@ -26,11 +26,11 @@
     "option": "voyage ecologique",
     "energy": "electrique",
     "conducteur": "Julia Rock",
-    "seatdispo": "3",
+    "seatAvailable": "3",
     "price": "4 credits",
     "note": "5",
     "duree": "1H15",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Deauville",
@@ -42,11 +42,11 @@
     "option": "voyage non ecologique",
     "energy": "essence",
     "conducteur": "Eliot Cool",
-    "seatdispo": "3",
+    "seatAvailable": "3",
     "price": "7 credits",
     "note": "4",
     "duree": "3H45",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Rennes",
@@ -60,11 +60,11 @@
     "option": "voyage ecologique",
     "energy": "electrique",
     "conducteur": "Lucie Blanc",
-    "seatdispo": "2",
+    "seatAvailable": "2",
     "price": "8 credits",
     "note": "5",
     "duree": "4H15",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Tours",
@@ -78,11 +78,11 @@
     "option": "voyage ecologique",
     "energy": "hybride",
     "conducteur": "Antoine Vert",
-    "seatdispo": "1",
+    "seatAvailable": "1",
     "price": "3 credits",
     "note": "4",
     "duree": "1H30",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Blois",
@@ -96,11 +96,11 @@
     "option": "voyage non ecologique",
     "energy": "diesel",
     "conducteur": "Nicolas Brun",
-    "seatdispo": "2",
+    "seatAvailable": "2",
     "price": "6 credits",
     "note": "3",
     "duree": "2H45",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Rennes",
@@ -114,11 +114,11 @@
     "option": "voyage ecologique",
     "energy": "electrique",
     "conducteur": "Emma Green",
-    "seatdispo": "4",
+    "seatAvailable": "4",
     "price": "5 credits",
     "note": "5",
     "duree": "3H00",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Tours",
@@ -132,11 +132,11 @@
     "option": "voyage non ecologique",
     "energy": "essence",
     "conducteur": "Louis Martin",
-    "seatdispo": "1",
+    "seatAvailable": "1",
     "price": "7 credits",
     "note": "4",
     "duree": "3H15",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Deauville",
@@ -150,11 +150,11 @@
     "option": "voyage ecologique",
     "energy": "hybride",
     "conducteur": "Sarah Bleu",
-    "seatdispo": "3",
+    "seatAvailable": "3",
     "price": "6 credits",
     "note": "4",
     "duree": "4H00",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   },
   {
     "fromCity": "Rouen",
@@ -168,10 +168,10 @@
     "option": "voyage ecologique",
     "energy": "electrique",
     "conducteur": "Paul Gris",
-    "seatdispo": "2",
+    "seatAvailable": "2",
     "price": "7 credits",
     "note": "5",
     "duree": "4H30",
-    "jour": ""
+    "jour": ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   }
 ]

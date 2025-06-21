@@ -62,7 +62,7 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
             Option : ${t.option || "Non précisé"}<br>
             Énergie : ${t.energy || "Non précisé"}<br>
             Conducteur : ${t.conducteur || "Non précisé"}<br>
-            Places dispo : ${t.seatdispo || "Non précisé"}<br>
+            Places dispo : ${t.seatAvailable || "Non précisé"}<br>
             Prix : ${t.price || "Non précisé"}<br>
             Note : ${t.note || "Non précisé"}<br>
             Durée : ${t.duree || "Non précisé"}<br>
@@ -78,7 +78,7 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
           option: t.option,
           energy: t.energy,
           conducteur: t.conducteur,
-          seatdispo: t.seatdispo,
+          seatAvailable: t.seatAvailable,
           price: t.price,
           note: t.note,
           duree: t.duree,
@@ -141,7 +141,7 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
             Option : ${t.option}<br>
             Énergie : ${t.energy}<br>
             Conducteur : ${t.conducteur}<br>
-            Places dispo : ${t.seatdispo}<br>
+            Places dispo : ${t.seatAvailable}<br>
             Prix : ${t.price}<br>
             Note : ${t.note}<br>
             Durée : ${t.duree}<br>
@@ -157,7 +157,7 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
           option: t.option,
           energy: t.energy,
           conducteur: t.conducteur,
-          seatdispo: t.seatdispo,
+          seatAvailable: t.seatAvailable,
           price: t.price,
           note: t.note,
           duree: t.duree,
@@ -181,7 +181,7 @@ const selectedData = {
   option: "voyage ecologique",
   energy: "electrique",
   conducteur: "Marc Led",
-  seatdispo: "1",
+  seatAvailable: "1",
   price: "6 credits",
   note: "4",
   duree: "2H00",
