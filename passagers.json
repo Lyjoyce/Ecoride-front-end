@@ -3,7 +3,7 @@
         "firstname": "Léa",
         "lastname": "Moreau",
         "email": "lea.moreau@example.com",
-        "password": "leaPass01",
+        "password": "leaPass0123456",
         "tel": "0667890123",
         "photo": "lea.jpg",
         "roleName": "ROLE_PASSAGER"
@@ -12,7 +12,7 @@
         "firstname": "Thomas",
         "lastname": "Renard",
         "email": "thomas.renard@example.com",
-        "password": "thomasPass02",
+        "password": "thomasPass0234",
         "tel": "0678901234",
         "photo": "thomas.jpg",
         "roleName": "ROLE_PASSAGER"
