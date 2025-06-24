@@ -38,7 +38,9 @@ async function login() {
     localStorage.setItem("firstname", actor.firstname);
     localStorage.setItem("credits", actor.credits);
     localStorage.setItem("isAuthenticated", "true");
-
+    localStorage.setItem("token", actor.token); // accessToken
+    localStorage.setItem("refreshToken", actor.refreshToken); // refreshToken
+    console.log(actor)
     window.location.href = "index.html";
 
   } catch (error) {
@@ -62,7 +64,6 @@ function showUserMenu(firstname) {
   }
 }
 
-
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {
@@ -71,7 +72,6 @@ if (logoutBtn) {
   });
 }
 
-/*
 // Option : protection d'accès à certaines pages
 function checkAuth() {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
@@ -80,7 +80,84 @@ function checkAuth() {
     window.location.href = "login.html";
   }
 }
-*/
+
+const token = localStorage.getItem("token"); // Assure-toi qu’il est stocké
+
+fetch("http://localhost:8082/api/v1/carpooling/create", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer " + token
+  },
+  body: JSON.stringify({
+    fromCity: "Rouen",
+    toCity: "Deauville",
+    departureDate: "2025-06-30",
+    // etc.
+  })
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Erreur " + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log("Réponse du backend :", data);
+  })
+  .catch(error => {
+    console.error("Erreur lors de l'appel :", error);
+  });
+
+async function fetchWithAutoRefresh(url, options = {}) {
+  const token = localStorage.getItem("token");
+  const refreshToken = localStorage.getItem("refreshToken");
+
+  // 1. Essai avec le token actuel
+  let response = await fetch(url, {
+    ...options,
+    headers: {
+      ...(options.headers || {}),
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + token,
+    }
+  });
+
+  // 2. Si 401 (Unauthorized), on tente le rafraîchissement
+  if (response.status === 401 && refreshToken) {
+    const refreshResponse = await fetch("http://localhost:8082/api/v1/auth/refresh", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + refreshToken
+      }
+    });
+
+    if (refreshResponse.ok) {
+      const data = await refreshResponse.json();
+      localStorage.setItem("token", data.token);
+
+      // Réessai avec le nouveau token
+      response = await fetch(url, {
+        ...options,
+        headers: {
+          ...(options.headers || {}),
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + data.token,
+        }
+      });
+    } else {
+      alert("Session expirée, veuillez vous reconnecter.");
+      window.location.href = "login.html";
+      return;
+    }
+  }
+
+  if (!response.ok) {
+    throw new Error("Erreur HTTP : " + response.status);
+  }
+
+  return response.json();
+}
 
 /*
 function escapeHtml(text) {

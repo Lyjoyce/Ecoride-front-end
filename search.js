@@ -96,6 +96,22 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
     });
 });
 
+fetchWithAutoRefresh("http://localhost:8082/api/v1/carpooling/create", {
+  method: "POST",
+  body: JSON.stringify({
+    fromCity: "Rouen",
+    toCity: "Deauville",
+    departureDate: "2025-06-30"
+  })
+})
+  .then(data => {
+    console.log("Réponse backend :", data);
+  })
+  .catch(error => {
+    console.error("Erreur : ", error);
+  });
+
+
 
 
 /*document.getElementById('searchForm').addEventListener('submit', function (e) {
