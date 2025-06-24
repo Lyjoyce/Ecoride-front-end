@@ -163,7 +163,7 @@ main{
 .card{
     margin-top: 60px;
     margin-bottom: 30px;
-    height: 300px;
+    height: 500px;
     border-radius: 5px;
     padding: 5px;
     display: flex;
@@ -183,6 +183,7 @@ input{
     padding: 2px;
     cursor: pointer;
 }
+
 .valid {
   color: #98c433;
 }

@@ -20,7 +20,7 @@ async function login() {
   }
 
   try {
-    const response = await fetch("http://localhost:8082/api/v1/actor/login", {
+    const response = await fetch("http://localhost:8082/api/v1/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -83,31 +83,6 @@ function checkAuth() {
 
 const token = localStorage.getItem("token"); // Assure-toi qu’il est stocké
 
-fetch("http://localhost:8082/api/v1/carpooling/create", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Authorization": "Bearer " + token
-  },
-  body: JSON.stringify({
-    fromCity: "Rouen",
-    toCity: "Deauville",
-    departureDate: "2025-06-30",
-    // etc.
-  })
-})
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Erreur " + response.status);
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log("Réponse du backend :", data);
-  })
-  .catch(error => {
-    console.error("Erreur lors de l'appel :", error);
-  });
 
 async function fetchWithAutoRefresh(url, options = {}) {
   const token = localStorage.getItem("token");

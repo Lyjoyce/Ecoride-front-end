@@ -16,7 +16,7 @@
         "telephone": "0678901234",
         "photo": "thomas.jpg",
         "roleName": "ROLE_PASSAGER",
-        "seatAvailable": 2
+        "seatAvailable": 1
     },
     {
         "firstname": "Sophie",

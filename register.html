@@ -72,6 +72,27 @@
             title="Doit contenir au moins une majuscule, une minuscule, un chiffre et 14 caractères minimum"
             required>
         </div>
+
+        <!-- À insérer dans <form id="register-form" class="formulaire">, juste après le champ mot de passe -->
+<div class="rod">
+  <label for="telephone">Téléphone :</label>
+  <input type="tel" id="telephone" name="telephone" placeholder="06XXXXXXXX" pattern="^0[1-9]\d{8}$" required>
+</div>
+
+<div class="rod">
+  <label for="role">Rôle :</label>
+  <select id="role" name="role" required>
+    <option value="">-- Sélectionner un rôle --</option>
+    <option value="ROLE_PASSAGER">Passager</option>
+    <option value="ROLE_CONDUCTEUR">Conducteur</option>
+  </select>
+</div>
+
+<div class="rod" id="seatAvailable-container" style="display: none;">
+  <label for="seatAvailable">Nombre de places souhaitées :</label>
+  <input type="number" id="seatAvailable" name="seatAvailable" min="1" max="4">
+</div>
+
       </div>
 
       <div class="rod_support">

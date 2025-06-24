@@ -1,114 +1,97 @@
 function escapeHtml(text) {
-    const map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;'
-    };
-    return text.replace(/[&<>"']/g, (m) => map[m]);
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
-document.getElementById("register-form").addEventListener("submit", async function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("register-form");
+  const roleSelect = document.getElementById("role");
+  const seatAvailableContainer = document.getElementById("seatAvailable-container");
+  const passwordInput = document.getElementById("password");
 
-    const firstname = document.getElementById("firstname").value.trim();
-    const lastname = document.getElementById("lastname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
+  const letter = document.getElementById("letter");
+  const capital = document.getElementById("capital");
+  const number = document.getElementById("number");
+  const length = document.getElementById("length");
 
-    
-    if (!firstname || !lastname || !email || !password) {
-        alert("Veuillez remplir tous les champs.");
-        return;
+  // Affichage dynamique du champ seatAvailable
+  roleSelect.addEventListener("change", () => {
+    if (roleSelect.value === "ROLE_PASSAGER") {
+      seatAvailableContainer.style.display = "block";
+      document.getElementById("seatAvailable").setAttribute("required", true);
+    } else {
+      seatAvailableContainer.style.display = "none";
+      document.getElementById("seatAvailable").removeAttribute("required");
     }
+  });
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Adresse email invalide.");
-        return;
-    }
-
-    const url = "http://localhost:8082/api/v1/auth/register";
-
-    const userData = {
-        firstname,
-        lastname,
-        email,
-        password,
-        credits: 20
-    };
-
-    try {
-        const response = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(userData)
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            console.log("Utilisateur inscrit avec succès :", data);
-            alert("Inscription réussie ! Vous pouvez maintenant vous connecter.");
-            window.location.href = "login.html";
-        } else {
-            const errorData = await response.json().catch(() => ({}));
-            const message = errorData.message || response.statusText;
-            alert("Erreur lors de l'inscription : " + message);
-            console.warn("Réponse erreur :", errorData);
-        }
-
-    } catch (error) {
-        console.error("Erreur réseau :", error);
-        alert("Une erreur réseau s'est produite. Veuillez réessayer plus tard.");
-    }
-});
-
-function showUserMenu(firstname) {
-    const firstnameDisplay = document.getElementById("actorname-display");
-    if (firstnameDisplay) {
-        firstnameDisplay.textContent = escapeHtml(firstname);
-    }
-}
-
-const passwordInput = document.getElementById("password");
-const letter = document.getElementById("letter");
-const capital = document.getElementById("capital");
-const number = document.getElementById("number");
-const length = document.getElementById("length");
-
-passwordInput.addEventListener("input", function () {
+  // Validation dynamique du mot de passe
+  passwordInput.addEventListener("input", () => {
     const value = passwordInput.value;
 
-    if (/[a-z]/.test(value)) {
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-    } else {
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
+    letter.classList.toggle("valid", /[a-z]/.test(value));
+    letter.classList.toggle("invalid", !/[a-z]/.test(value));
+
+    capital.classList.toggle("valid", /[A-Z]/.test(value));
+    capital.classList.toggle("invalid", !/[A-Z]/.test(value));
+
+    number.classList.toggle("valid", /\d/.test(value));
+    number.classList.toggle("invalid", !/\d/.test(value));
+
+    length.classList.toggle("valid", value.length >= 14);
+    length.classList.toggle("invalid", value.length < 14);
+  });
+
+  // Soumission du formulaire
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = {
+      firstname: form.firstname.value.trim(),
+      lastname: form.lastname.value.trim(),
+      email: form.email.value.trim(),
+      password: form.password.value,
+      telephone: form.telephone.value.trim(),
+      role: form.role.value,
+    };
+
+    if (form.role.value === "ROLE_PASSAGER") {
+      data.seatAvailable = parseInt(form.seatAvailable.value);
     }
 
-    if (/[A-Z]/.test(value)) {
-        capital.classList.remove("invalid");
-        capital.classList.add("valid");
-    } else {
-        capital.classList.remove("valid");
-        capital.classList.add("invalid");
+    // Validation basique email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      alert("Adresse email invalide.");
+      return;
     }
 
-    if (/\d/.test(value)) {
-        number.classList.remove("invalid");
-        number.classList.add("valid");
-    } else {
-        number.classList.remove("valid");
-        number.classList.add("invalid");
-    }
+    try {
+      const response = await fetch("http://localhost:8082/api/v1/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-    if (value.length >= 14) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
-    } else {
-        length.classList.remove("valid");
-        length.classList.add("invalid");
+      if (response.ok) {
+        const result = await response.json();
+        alert("Inscription réussie !");
+        console.log("Token reçu :", result.token);
+        localStorage.setItem("token", result.token);
+        window.location.href = "login.html";
+      } else {
+        const errorText = await response.text();
+        alert("Erreur : " + errorText);
+      }
+    } catch (err) {
+      alert("Une erreur s’est produite : " + err.message);
+      console.error("Erreur réseau :", err);
     }
+  });
 });
