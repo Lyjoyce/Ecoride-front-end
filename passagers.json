@@ -3,62 +3,67 @@
         "firstname": "Léa",
         "lastname": "Moreau",
         "email": "lea.moreau@example.com",
-        "password": "leaPass0123456",
-        "tel": "0667890123",
-        "photo": "lea.jpg",
-        "roleName": "ROLE_PASSAGER"
+        "password": "lea.Pass012345",
+        "telephone": "0667890123",
+        "roleName": "ROLE_PASSAGER",
+        "seatAvailable": 2
     },
     {
         "firstname": "Thomas",
         "lastname": "Renard",
         "email": "thomas.renard@example.com",
-        "password": "thomasPass0234",
-        "tel": "0678901234",
+        "password": "thomasPass023.",
+        "telephone": "0678901234",
         "photo": "thomas.jpg",
-        "roleName": "ROLE_PASSAGER"
+        "roleName": "ROLE_PASSAGER",
+        "seatAvailable": 2
     },
     {
         "firstname": "Sophie",
         "lastname": "Leroy",
         "email": "sophie.leroy@example.com",
         "password": "sophiePass03",
-        "tel": "0689012345",
+        "telephone": "0689012345",
         "photo": "sophie.jpg",
-        "roleName": "ROLE_PASSAGER"
+        "roleName": "ROLE_PASSAGER",
+        "seatAvailable": 1
     },
     {
         "firstname": "Lucas",
         "lastname": "Colin",
         "email": "lucas.colin@example.com",
         "password": "lucasPass04",
-        "tel": "0690123456",
+        "telephone": "0690123456",
         "photo": "lucas.jpg",
-        "roleName": "ROLE_PASSAGER"
+        "roleName": "ROLE_PASSAGER",
+        "seatAvailable": 1
     },
     {
         "firstname": "Camille",
         "lastname": "Fabre",
         "email": "camille.fabre@example.com",
         "password": "camillePass05",
-        "tel": "0601234567",
+        "telephone": "0601234567",
         "photo": "camille.jpg",
-        "roleName": "ROLE_PASSAGER"
+        "roleName": "ROLE_PASSAGER",
+        "seatAvailable": 1
     },
      {
         "firstname": "Bob",
         "lastname": "Martin",
         "email": "bob.martin@example.com",
         "password": "bobpass456",
-        "tel": "0623456789",
+        "telephone": "0623456789",
         "photo": "bob.jpg",
-        "roleName": "ROLE_PASSAGER"
+        "roleName": "ROLE_PASSAGER",
+        "seatAvailable": 1
     },
     {
         "firstname": "Chloé",
         "lastname": "Petit",
         "email": "chloe.petit@example.com",
         "password": "chloe789",
-        "tel": "0634567890",
+        "telephone": "0634567890",
         "photo": "chloe.jpg",
         "roleName": "ROLE_PASSAGER"
     },
@@ -68,7 +73,7 @@
         "lastname": "Bernard",
         "email": "emma.bernard@example.com",
         "password": "emma456",
-        "tel": "0656789012",
+        "telephone": "0656789012",
         "photo": "emma.jpg",
         "roleName": "ROLE_PASSAGER"
     }
