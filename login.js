@@ -1,3 +1,4 @@
+// Fonction pour échapper les caractères HTML (prévention XSS)
 function escapeHtml(text) {
   const map = {
     '&': '&amp;',
@@ -9,10 +10,10 @@ function escapeHtml(text) {
   return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
+// Fonction asynchrone pour gérer la connexion
 async function login() {
   const email = document.getElementById("login-email").value.trim();
   const password = document.getElementById("login-password").value;
-
 
   if (!email || !password) {
     alert("Veuillez remplir tous les champs.");
@@ -26,7 +27,6 @@ async function login() {
       body: JSON.stringify({ email, password }),
     });
 
-    // Gestion des erreurs HTTP
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       const message = errorData.message || response.statusText;
@@ -38,17 +38,17 @@ async function login() {
     localStorage.setItem("firstname", actor.firstname);
     localStorage.setItem("credits", actor.credits);
     localStorage.setItem("isAuthenticated", "true");
-    localStorage.setItem("token", actor.token); // accessToken
-    localStorage.setItem("refreshToken", actor.refreshToken); // refreshToken
-    console.log(actor)
-    window.location.href = "index.html";
+    localStorage.setItem("token", actor.token);
+    localStorage.setItem("refreshToken", actor.refreshToken);
 
+    window.location.href = "index.html";
   } catch (error) {
     console.error("Erreur :", error);
     alert("Erreur : " + error.message);
   }
 }
 
+// Ajout de l'écouteur d'événement sur le formulaire de connexion
 const loginForm = document.getElementById("login-form");
 if (loginForm) {
   loginForm.addEventListener("submit", function (event) {
@@ -57,6 +57,7 @@ if (loginForm) {
   });
 }
 
+// Affiche le prénom de l'utilisateur connecté dans le menu
 function showUserMenu(firstname) {
   const firstnameDisplay = document.getElementById("actorname-display");
   if (firstnameDisplay) {
@@ -64,6 +65,7 @@ function showUserMenu(firstname) {
   }
 }
 
+// Gestion du bouton de déconnexion
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {
@@ -72,7 +74,7 @@ if (logoutBtn) {
   });
 }
 
-// Option : protection d'accès à certaines pages
+// Vérifie que l'utilisateur est authentifié avant accès aux pages protégées
 function checkAuth() {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
   if (isAuthenticated !== "true") {
@@ -81,14 +83,12 @@ function checkAuth() {
   }
 }
 
-const token = localStorage.getItem("token"); // Assure-toi qu’il est stocké
-
-
+// Fonction fetch avec gestion automatique du rafraîchissement du token JWT
 async function fetchWithAutoRefresh(url, options = {}) {
-  const token = localStorage.getItem("token");
+  let token = localStorage.getItem("token");
   const refreshToken = localStorage.getItem("refreshToken");
 
-  // 1. Essai avec le token actuel
+  // Essai avec le token actuel
   let response = await fetch(url, {
     ...options,
     headers: {
@@ -98,7 +98,7 @@ async function fetchWithAutoRefresh(url, options = {}) {
     }
   });
 
-  // 2. Si 401 (Unauthorized), on tente le rafraîchissement
+  // Si token expiré, tente le rafraîchissement
   if (response.status === 401 && refreshToken) {
     const refreshResponse = await fetch("http://localhost:8082/api/v1/auth/refresh", {
       method: "POST",
@@ -110,14 +110,15 @@ async function fetchWithAutoRefresh(url, options = {}) {
     if (refreshResponse.ok) {
       const data = await refreshResponse.json();
       localStorage.setItem("token", data.token);
+      token = data.token;
 
-      // Réessai avec le nouveau token
+      // Nouvelle requête avec le token rafraîchi
       response = await fetch(url, {
         ...options,
         headers: {
           ...(options.headers || {}),
           "Content-Type": "application/json",
-          "Authorization": "Bearer " + data.token,
+          "Authorization": "Bearer " + token,
         }
       });
     } else {
@@ -133,70 +134,3 @@ async function fetchWithAutoRefresh(url, options = {}) {
 
   return response.json();
 }
-
-/*
-function escapeHtml(text) {
-  const map = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;',
-  };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
-}
-
-async function login() {
-  const email = document.getElementById("login-email").value.trim();
-  const password = document.getElementById("login-password").value;
-
-  if (!email || !password) {
-    alert("Veuillez remplir tous les champs.");
-    return;
-  }
-
-  try {
-    const response = await fetch("http://localhost:8081/api/v1/actor/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || "Erreur de connexion.");
-    }
-
-    const actor = await response.json();
-    localStorage.setItem("firstname", actor.firstname);
-    localStorage.setItem("credits", actor.credits);
-    localStorage.setItem("isAuthenticated", "true");
-
-    window.location.href = "index.html";
-  } catch (error) {
-    console.error("Erreur :", error);
-    alert("Erreur : " + error.message);
-  }
-}
-// Gérer soumission du formulaire
-document.getElementById("login-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  login();
-});
-
-function showUserMenu(firstname) {
-    const firstnameDisplay = document.getElementById("actorname-display");
-    if (firstnameDisplay) {
-        firstnameDisplay.textContent = escapeHtml(firstname);
-    }
-}
-/*
-function checkAuth() {
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-    if (isAuthenticated !== "true") {
-        alert("Veuillez vous connecter");
-        window.location.href = "login.html";
-    }
-}
-*/
-
