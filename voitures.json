@@ -6,7 +6,6 @@
   "modele": "Model 3",
   "couleur": "Noir",
   "energy": "Électrique",
-  "options": ["Autopilot", "Toit panoramique"],
   "ecologique": true,
   "roleName": "ROLE_CONDUCTEUR"
 }
