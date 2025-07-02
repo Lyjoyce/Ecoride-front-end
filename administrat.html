@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Admin</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Dashboard Administrateur</h1>
+
+  <!-- Créer compte employé -->
+  <section>
+    <h2>Créer un compte employé</h2>
+    <form id="employeeForm">
+      <input type="text" name="firstname" placeholder="Prénom" required>
+      <input type="text" name="lastname" placeholder="Nom" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Mot de passe" required>
+      <button type="submit">Créer</button>
+    </form>
+  </section>
+
+  <!-- Graphiques -->
+  <section>
+    <h2>Statistiques</h2>
+    <p>Total des crédits : <span id="totalCredits"></span></p>
+    <canvas id="carpoolingChart" width="400" height="200"></canvas>
+    <canvas id="creditsChart" width="400" height="200"></canvas>
+  </section>
+
+  <!-- Suspension -->
+  <section>
+    <h2>Suspendre un utilisateur</h2>
+    <input type="number" id="actorId" placeholder="ID de l'utilisateur">
+    <button onclick="suspendActor()">Suspendre</button>
+  </section>
+
+  <script>
+    const API_BASE = 'https://ton-api.com/api/v1';
+
+    document.getElementById('employeeForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        firstname: form.firstname.value,
+        lastname: form.lastname.value,
+        email: form.email.value,
+        password: form.password.value
+      };
+
+      await fetch(`${API_BASE}/admin/create-employee`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem('token') },
+        body: JSON.stringify(data)
+      });
+
+      alert('Employé créé');
+      form.reset();
+    });
+
+    async function fetchAndRenderCharts() {
+      const token = localStorage.getItem('token');
+
+      const [carpoolingRes, creditsRes, totalRes] = await Promise.all([
+        fetch(`${API_BASE}/admin/stats/carpooling-per-day`, { headers: { 'Authorization': 'Bearer ' + token }}),
+        fetch(`${API_BASE}/admin/stats/credits-per-day`, { headers: { 'Authorization': 'Bearer ' + token }}),
+        fetch(`${API_BASE}/admin/stats/total-credits`, { headers: { 'Authorization': 'Bearer ' + token }})
+      ]);
+
+      const carpoolingData = await carpoolingRes.json();
+      const creditsData = await creditsRes.json();
+      const totalCredits = await totalRes.json();
+
+      document.getElementById('totalCredits').innerText = totalCredits;
+
+      const carpoolingChart = new Chart(document.getElementById('carpoolingChart'), {
+        type: 'bar',
+        data: {
+          labels: Object.keys(carpoolingData),
+          datasets: [{
+            label: 'Covoiturages par jour',
+            data: Object.values(carpoolingData),
+            backgroundColor: 'blue'
+          }]
+        }
+      });
+
+      const creditsChart = new Chart(document.getElementById('creditsChart'), {
+        type: 'line',
+        data: {
+          labels: Object.keys(creditsData),
+          datasets: [{
+            label: 'Crédits gagnés par jour',
+            data: Object.values(creditsData),
+            backgroundColor: 'green',
+            borderColor: 'green',
+            fill: false
+          }]
+        }
+      });
+    }
+
+    async function suspendActor() {
+      const actorId = document.getElementById('actorId').value;
+      const token = localStorage.getItem('token');
+
+      await fetch(`${API_BASE}/admin/suspend/${actorId}`, {
+        method: 'PUT',
+        headers: { 'Authorization': 'Bearer ' + token }
+      });
+
+      alert('Compte suspendu');
+    }
+
+    // On load
+    fetchAndRenderCharts();
+  </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f8f9fa;
+    }
+    h2 {
+      color: #333;
+    }
+    .section {
+      margin-bottom: 3rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.6rem;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tableau de bord Administrateur</h1>
+
+  <div class="section">
+    <h2>Créer un compte employé</h2>
+    <form id="employeeForm">
+      <label>Nom complet:</label>
+      <input type="text" id="employeeName" required>
+      
+      <label>Email:</label>
+      <input type="email" id="employeeEmail" required>
+
+      <label>Mot de passe:</label>
+      <input type="password" id="employeePassword" required>
+
+      <button type="submit">Créer l’employé</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Statistiques - Covoiturages par jour</h2>
+    <canvas id="carpoolChart" height="100"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>Statistiques - Crédits gagnés par jour</h2>
+    <canvas id="creditsChart" height="100"></canvas>
+    <h3>Total des crédits gagnés : <span id="totalCredits">...</span></h3>
+  </div>
+
+  <div class="section">
+    <h2>Gestion des comptes utilisateurs/employés</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Email</th>
+          <th>Rôle</th>
+          <th>Statut</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="userTable">
+        <!-- Remplissage dynamique -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.getElementById('employeeForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('employeeName').value;
+      const email = document.getElementById('employeeEmail').value;
+      const password = document.getElementById('employeePassword').value;
+
+      // Appel à ton backend ici
+      fetch('/api/v1/admin/create-employee', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      })
+      .then(response => response.ok ? alert("Employé créé !") : alert("Erreur création"))
+      .catch(err => console.error(err));
+    });
+
+    // Fake Data – à remplacer par API backend
+    const carpoolData = {
+      labels: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
+      datasets: [{
+        label: 'Covoiturages',
+        data: [5, 9, 7, 10, 6],
+        backgroundColor: '#28a745'
+      }]
+    };
+
+    const creditsData = {
+      labels: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
+      datasets: [{
+        label: 'Crédits gagnés',
+        data: [12, 15, 20, 18, 25],
+        backgroundColor: '#17a2b8'
+      }]
+    };
+
+    const totalCredits = creditsData.datasets[0].data.reduce((a, b) => a + b, 0);
+    document.getElementById("totalCredits").innerText = totalCredits + " crédits";
+
+    new Chart(document.getElementById("carpoolChart"), {
+      type: 'bar',
+      data: carpoolData
+    });
+
+    new Chart(document.getElementById("creditsChart"), {
+      type: 'line',
+      data: creditsData
+    });
+
+    // Liste des utilisateurs à afficher (FAKE DATA à remplacer)
+    const users = [
+      { name: "Jean Dupont", email: "jean@example.com", role: "ROLE_PASSAGER", active: true },
+      { name: "Marie Curie", email: "marie@example.com", role: "ROLE_EMPLOYE", active: false },
+    ];
+
+    const tableBody = document.getElementById('userTable');
+    users.forEach(u => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${u.name}</td>
+        <td>${u.email}</td>
+        <td>${u.role}</td>
+        <td>${u.active ? 'Actif' : 'Suspendu'}</td>
+        <td>
+          <button onclick="toggleUser('${u.email}', ${u.active})">
+            ${u.active ? 'Suspendre' : 'Réactiver'}
+          </button>
+        </td>
+      `;
+      tableBody.appendChild(tr);
+    });
+
+    function toggleUser(email, isActive) {
+      // Appel à une route backend de suspension
+      fetch('/api/v1/admin/toggle-user', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, suspend: isActive })
+      })
+      .then(response => location.reload())
+      .catch(err => console.error(err));
+    }
+  </script>
+
+</body>
+</html>
