@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Contactez-nous</title>
 
 </head>
+<header>
+    <div>
+        <div class="banniere-logo">
+            <img src="images/logo1.png" class="logo_ecoride" alt="logo_ecoride">
+        </div>
+        <div class="myself">
+            <div>
+                <div class="appbar">
+                    <div class="actorname-menu">
+                        <span id="actorname-display"></span>
+                        <span id="credits-display"></span>
+                        <button id="logout-btn">Se déconnecter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn btn_menu">
+                    <img src="icons/icon_menu.png" class="icon_menu" alt="icon_menu">
+                </button>
+                <div class="dropdown-content">
+                    <a href="details.html">covoiturages</a>
+                    <a href="contact.html">contact</a>
+                    <a href="login.html">connexion</a>
+                    <a href="login.html">déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headnav">
+        <nav>
+            <a href="index.html" class="ahome">
+                <img src="icons/icon_arrow_back.png" class="arrow_back" alt="">
+                Accueil</a>
+            <a href="register.html" class="acreer_uncompte">Créer un compte</a>
+            <a href="login.html" class="alogin">Connexion</a>
+        </nav>
+    </div>
+</header>
+
 <body>
 
-<h2>Formulaire de contact</h2>
+    <h2>Formulaire de contact</h2>
 
-<form id="contactForm">
-    <label for="name">Nom *</label>
-    <input type="text" id="name" name="name" required>
+    <form id="contactForm">
+        <label for="name">Nom *</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="message">Message *</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-    <button type="submit">Envoyer</button>
+        <button type="submit">Envoyer</button>
 
-    <div class="message" id="responseMessage"></div>
-</form>
+        <div class="message" id="responseMessage"></div>
+    </form> <br>
 
-<script src="contact.js"></script>
-
-<footer>
+    <footer>
         <img src="images/logo_footer.png" class="logo_ecoride" alt="logo_ecoride"> <br>
         <div class="footerlink">
             <a href="mailto:ecoride@gmail.com" class="footera">ecoride@gmail.com</a>
@@ -37,6 +75,7 @@
     </footer>
 
     <script src="search.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

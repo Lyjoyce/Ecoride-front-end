@@ -1,6 +1,6 @@
 body {
     padding: 30px;
-    font-size: large;
+    font-size: xx-large;
 }
 
 form {
@@ -10,7 +10,9 @@ form {
     border-radius: 10px;
     padding: 30px;
 }
-
+.logo_ecoride{
+    width: 100px;
+}
 label {
     display: block;
     margin-top: 15px;
