@@ -92,7 +92,6 @@ header{
   .dropdown {
     height: 50px;
     display:flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content:flex-start ;
     margin: 20px;
@@ -101,6 +100,10 @@ header{
     display: none;
     position: absolute;
     background-color: white;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start
   }
 
   .dropdown-content a {
