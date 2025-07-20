@@ -92,6 +92,7 @@ header{
   .dropdown {
     height: 50px;
     display:flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content:flex-start ;
     margin: 20px;
@@ -390,6 +391,13 @@ h1{
         width: 200px;
         height: 200px;
     }
+    .dropdown {
+    height: 50px;
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start ;
+    margin: 20px;
+  }
  
     nav{
     width: 700px;
