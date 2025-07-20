@@ -1,5 +1,5 @@
-body{ 
-    font-family: 'Franklin Gothic Medium','Times New Roman', Times, serif sans-serif;
+body {
+    font-family: 'Franklin Gothic Medium', 'Times New Roman', Times, serif sans-serif;
     box-sizing: border-box;
     min-width: 320px;
     max-width: 768px;
@@ -7,47 +7,55 @@ body{
     display: flex;
     flex-direction: column;
 }
-.center{
+
+.center {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
     padding-left: 5px;
 }
-header{
-    border-bottom:solid 1px #26116A;
+
+header {
+    border-bottom: solid 1px #26116A;
     padding-right: 0px;
 }
-.banniere-logo{
+
+.banniere-logo {
     display: flex;
     justify-content: center;
     font-family: cursive;
     background-color: #98c433;
-    border:solid 2px #98c433;
+    border: solid 2px #98c433;
 }
-.logo_ecoride{
+
+.logo_ecoride {
     width: 100px;
     height: 100px;
 }
-.myself{
+
+.myself {
     display: flex;
     flex-direction: row;
 }
-.appbar{
+
+.appbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color:white;
+    background-color: white;
     color: black;
     margin-top: 10px;
 }
-.firstname-menu{
+
+.firstname-menu {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
-#firstname-display{
+
+#firstname-display {
     background-color: white;
     border: none;
     color: black;
@@ -59,7 +67,8 @@ header{
     margin-right: 15px;
     font-weight: bolder;
 }
-#logout-btn{
+
+#logout-btn {
     background-color: white;
     border: none;
     color: black;
@@ -67,12 +76,13 @@ header{
     cursor: pointer;
     padding: 5px;
 }
-#logout-btn:hover{
-    background-color:#260401;
+
+#logout-btn:hover {
+    background-color: #260401;
     color: white;
 }
 
-.btn_menu{
+.btn_menu {
     height: 20px;
     width: 20px;
     background-color: white;
@@ -81,51 +91,68 @@ header{
     align-items: center;
     cursor: pointer;
 }
-.icon_menu{
+
+.icon_menu {
     height: 20px;
     width: 20px;
 }
+
 .dropbtn {
     background-color: white;
     border: none;
-  }
-  .dropdown {
+}
+
+.dropdown {
     height: 50px;
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content:flex-start ;
+    justify-content: flex-start;
     margin: 20px;
-  }
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content:flex-start
-  }
+    justify-content: flex-start
+}
 
-  .dropdown-content a {
+.dropdown-content a {
     color: black;
     padding: 5px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     font-size: 12px;
-  }
-  .dropdown-content a:hover {
-    background-color:black;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
     color: white;
 }
-  .dropdown:hover .dropdown-content {display: flex;}
-  .dropdown:hover .dropbtn {background-color: #26116A; color: white;}
 
-.headnav{
+.dropdown:hover .dropdown-content {
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #26116A;
+    color: white;
+}
+
+.headnav {
     display: flex;
     justify-content: center;
 }
-nav{
+
+nav {
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     width: 260px;
@@ -136,30 +163,35 @@ nav{
     justify-content: space-around;
     align-items: center;
     border: solid 2px;
-    position:absolute;
+    position: absolute;
     margin-top: -15px;
 }
-a{
+
+a {
     cursor: pointer;
     color: white;
     text-decoration: none;
 }
-.ahome{
+
+.ahome {
     background-color: white;
     color: black;
     padding: 2px;
 }
-.acreer_uncompte:hover{
+
+.acreer_uncompte:hover {
     color: black;
     background-color: white;
     padding: 2px;
 }
-.alogin:hover{
+
+.alogin:hover {
     color: black;
     background-color: white;
     padding: 2px;
 }
-main{
+
+main {
     height: auto;
     background-color: white;
     display: flex;
@@ -168,7 +200,7 @@ main{
     align-items: center;
 }
 
-.presentation_ecoride{
+.presentation_ecoride {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 400px;
     width: 320px;
@@ -178,10 +210,12 @@ main{
     display: flex;
     flex-direction: column;
 }
-h1{
+
+h1 {
     margin: 10px;
 }
-.txt_eco_slogan{
+
+.txt_eco_slogan {
     font-size: smaller;
     margin: 0;
     display: flex;
@@ -189,7 +223,8 @@ h1{
     margin-left: 60%;
     margin-top: -25%;
 }
-.img_presentation{
+
+.img_presentation {
     width: 100px;
     height: 100px;
     border-radius: 30px;
@@ -197,10 +232,12 @@ h1{
     flex-direction: column;
     margin-left: 25%;
 }
-.preferences{
+
+.preferences {
     border-top: #98c433 solid 1px;
 }
-.rod_presentation_itinerary{
+
+.rod_presentation_itinerary {
     width: 310px;
     height: 30px;
     border-radius: 100px;
@@ -212,14 +249,16 @@ h1{
     margin-top: 30px;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
-#result{
+
+#result {
     font-size: larger;
     font-weight: bolder;
 }
-.option{
+
+.option {
     display: flex;
     align-items: center;
     border: white solid 1px;
@@ -227,15 +266,18 @@ h1{
     margin: 5px 0;
     cursor: pointer;
 }
-.option:hover{
+
+.option:hover {
     background-color: #98c433;
 }
-input{
+
+input {
     height: 40px;
     width: 180px;
     border: #639e3f solid 2px;
 }
-.search{
+
+.search {
     width: 100px;
     height: 40px;
     font-size: medium;
@@ -248,16 +290,20 @@ input{
     color: black;
     cursor: pointer;
 }
-.critere{
+
+.critere {
     margin-bottom: 80px;
 }
-#critere{
+
+#critere {
     background-color: white;
     color: black;
     border: 1px solid;
-    padding: 10px;;
-}  
-.participate{
+    padding: 10px;
+    ;
+}
+
+.participate {
     width: 70px;
     height: 30px;
     margin: 10px;
@@ -269,10 +315,12 @@ input{
     color: black;
     cursor: pointer;
 }
-.carppol{
-  margin: 20px;  
+
+.carppol {
+    margin: 20px;
 }
-#carpooling_propose{
+
+#carpooling_propose {
     width: 200px;
     height: 50px;
     margin: 10px;
@@ -287,10 +335,11 @@ input{
     cursor: pointer;
 }
 
-#carpooling-form{
+#carpooling-form {
     margin: 30px;
 }
-.publier{
+
+.publier {
     width: 70px;
     height: 30px;
     margin: 10px;
@@ -303,7 +352,8 @@ input{
     cursor: pointer;
 
 }
-footer{
+
+footer {
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     padding-bottom: 15px;
@@ -311,163 +361,186 @@ footer{
     justify-content: space-evenly;
     background-color: #26116A;
 }
-.footerlink{
+
+.footerlink {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.footera:hover{
+
+.footera:hover {
     background-color: white;
     color: black;
 }
-.banniere-logo-footer{
+
+.banniere-logo-footer {
     font-family: cursive;
 }
-.logo_footer{
+
+.logo_footer {
     height: 50px;
     width: 50px;
 }
+
 @media only screen and (min-width: 768px) {
-    body{
+    body {
         min-width: 768px;
         max-width: 1024px;
     }
-    .logo_ecoride{
+
+    .logo_ecoride {
         width: 150px;
         height: 150px;
     }
- 
-nav{
-    width: 500px;
-}
-.presentation_ecoride{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 600px;
-    width: 690px;
-    margin-top: 30px;
-    color: black;
-}
-h1{
-    font-size: large;
-    margin: 10px;
-}
-.txt_eco_slogan{
-    font-size:medium;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    margin-left: 70%;
-    margin-top: -10%;
-}
-.img_presentation{
-    width: 150px;
-    height: 150px;
-    border-radius: 30px;
-    display: flex;
-    margin-top: 10px;
-}
-.car_covoiturage{
-    margin-left: 40%;
-}
-.car_eco{
-   margin-left:40%;
-}
-.car_bio{
-   margin-left: 40%;
-}
-.rod_presentation_itinerary{
-    width: 690px;
-}
 
-.search{
-    width: 200px;
-}
+    nav {
+        width: 500px;
+    }
+
+    .presentation_ecoride {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        height: 600px;
+        width: 690px;
+        margin-top: 30px;
+        color: black;
+    }
+
+    h1 {
+        font-size: large;
+        margin: 10px;
+    }
+
+    .txt_eco_slogan {
+        font-size: medium;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        margin-left: 70%;
+        margin-top: -10%;
+    }
+
+    .img_presentation {
+        width: 150px;
+        height: 150px;
+        border-radius: 30px;
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .car_covoiturage {
+        margin-left: 40%;
+    }
+
+    .car_eco {
+        margin-left: 40%;
+    }
+
+    .car_bio {
+        margin-left: 40%;
+    }
+
+    .rod_presentation_itinerary {
+        width: 690px;
+    }
+
+    .search {
+        width: 200px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
-    body{
+    body {
         min-width: 1024px;
         max-width: none;
         font-size: medium;
     }
-    .logo_ecoride{
+
+    .logo_ecoride {
         width: 200px;
         height: 200px;
     }
+
     .dropdown {
-    height: 50px;
-    display:flex;
-    flex-direction: row;
-    justify-content:flex-start ;
-    margin: 20px;
-  }
- 
-    nav{
-    width: 700px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 20px;
     }
-    .presentation_ecoride{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 400px;
-    width: 990px;
-    margin-top: 30px;
-    color: black;
-    display: flex;
-    flex-direction: row;
+
+    nav {
+        width: 700px;
     }
-    .pres-row{
+
+    .presentation_ecoride {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        height: 400px;
+        width: 990px;
+        margin-top: 30px;
+        color: black;
         display: flex;
         flex-direction: row;
     }
-h1{
-    font-size: larger;
-    margin: 10px;
-    display: flex;
-    flex-wrap: nowrap;
-}
-.txt_eco_slogan{
-    font-size:larger;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    margin-right:60%;
-    margin-top: 30%;
-}
-.img_presentation{
-    width: 200px;
-    height: 200px;
-    border-radius: 30px;
-    margin-top: 10%;
-}
-.car_covoiturage{
-    margin-left: 4%;
-}
-.car_eco{
-   margin-left:4%;
-}
-.car_bio{
-   margin-left: 4%;
-}
 
-.rod_presentation_itinerary{
-    width: 990px;
-    height: 50px;
-    border-radius: 100px;
-    background-color: #26116A;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-}
+    .pres-row {
+        display: flex;
+        flex-direction: row;
+    }
 
-.participate{
-    background-color: #ff3e3e;
-    width: 100px;
-    height: 50px;
-}
-footer{
-    font-size: x-large;
-}
-}
+    h1 {
+        font-size: larger;
+        margin: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
 
+    .txt_eco_slogan {
+        font-size: larger;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        margin-right: 60%;
+        margin-top: 30%;
+    }
 
+    .img_presentation {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        margin-top: 10%;
+    }
+
+    .car_covoiturage {
+        margin-left: 4%;
+    }
+
+    .car_eco {
+        margin-left: 4%;
+    }
+
+    .car_bio {
+        margin-left: 4%;
+    }
+
+    .rod_presentation_itinerary {
+        width: 990px;
+        height: 50px;
+        border-radius: 100px;
+        background-color: #26116A;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .participate {
+        background-color: #ff3e3e;
+        width: 100px;
+        height: 50px;
+    }
+
+    footer {
+        font-size: x-large;
+    }
+}
