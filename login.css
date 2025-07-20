@@ -274,4 +274,10 @@ footer{
     nav{
     width: 700px;
     }
+    a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+}
 }
