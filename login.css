@@ -280,4 +280,14 @@ footer{
     text-decoration: none;
     padding: 2px;
 }
+
+.mdp_oublie{
+    width: 160px;
+    height: 20px;
+    padding: 10px;
+    border: solid 2px white;
+    border-radius: 70px;
+    margin: 20px;
+    background-color:#26116A;
+}
 }
