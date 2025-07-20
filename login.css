@@ -128,6 +128,7 @@ a{
     cursor: pointer;
     color: white;
     text-decoration: none;
+    padding: 2px;
 }
 .arrow_back{
     width: 20px;
@@ -138,17 +139,17 @@ a{
 .ahome:hover{
     background-color: white;
     color: black;
-    padding: 2px;
+
 }
 .acreer_uncompte:hover{
     color: black;
     background-color: white;
-    padding: 2px;
+
 }
 .alogin{
     color: black;
     background-color: white;
-    padding: 2px;
+
 }
 
 main{
