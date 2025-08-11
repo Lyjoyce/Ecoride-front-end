@@ -1,0 +1,36 @@
+h1 {
+    font-size: large;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#infosConducteur{
+margin-top: 20px;
+} 
+
+h2 {
+    font-size: large;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+input, label {
+    height: 40px;
+    width: 150px;
+    border: #2F7A1F solid 2px;
+}
+.notices{
+    margin-top: 30px;
+}
+button {
+    width: 100px;
+    height: 50px;
+    font-size: medium;
+    margin: 10px;
+    border-radius: 10px;
+    background: #FFD700;
+    color: #000;
+    border: #333333 solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

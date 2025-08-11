@@ -1,0 +1,19 @@
+footer {
+    font-size: medium;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333333;
+    border: solid 5px #333333;
+}
+
+.footerlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footera:hover {
+    background-color: #FFD700;
+    color: black;
+}

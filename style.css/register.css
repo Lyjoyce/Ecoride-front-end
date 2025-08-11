@@ -1,5 +1,5 @@
 body{ 
-    font-family: 'Franklin Gothic Medium','Times New Roman', Times, serif sans-serif;
+    font-family: 'Montserrat' sans-serif;
     box-sizing: border-box;
     min-width: 320px;
     max-width: 768px;
@@ -8,14 +8,14 @@ body{
     flex-direction: column;
 }
 header{
-    border-bottom:#26116A solid 1px;
+    border-bottom:#333 solid 1px;
     padding-right: 10px;
 }
 .banniere-logo{
     display: flex;
     justify-content: center;
-    background-color: #98c433;
-    border: #98c433 solid 2px;
+    background-color: #333;
+    border: #333 solid 2px;
     font-family: cursive;
 }
 .logo_ecoride{
@@ -28,7 +28,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color:#639e3f;
+    background-color:#333;
     color: black;
     margin-top: 10px;
 }
@@ -61,7 +61,7 @@ header{
     padding: 5px;
 }
 #logout-btn:hover{
-    background-color:#26116A;
+    background-color:#2F7A1F;
     color: white;
 }
 
@@ -107,23 +107,22 @@ header{
     color: white;
 }
   .dropdown:hover .dropdown-content {display: flex;}
-  .dropdown:hover .dropbtn {background-color: #98c433;}
+  .dropdown:hover .dropbtn {background-color: #88B04B;}
 
 .headnav{
     display: flex;
     justify-content: center;
 }
 nav{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
     width: 260px;
     height: 50px;
-    background-color: #26116A;
+    background-color: #333;
     display: flex;
     justify-items: center;
     justify-content: space-around;
     align-items: center;
-    position:absolute;
+    border: solid 2px;
+    position: absolute;
     margin-top: -15px;
 }
 a{
@@ -139,21 +138,21 @@ a{
     color: white;
 }
 .ahome:hover{
-    background-color: white;
-    color: black;
+    background-color: #333;
+    color: #FFD700;
 }
 .acreer_uncompte{
-    color: black;
-    background-color: white;
+    color: #FFD700;
+    background-color: #333;
 }
 .alogin:hover{
-    color: black;
-    background-color: white;
+    color: #FFD700;
+    background-color: #333;
 }
 
 main{
     padding: 10px;
-    background-color:white;
+    background-color:#FFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +183,7 @@ input{
 }
 
 .valid {
-  color: #98c433;
+  color: #88B04B;
 }
 
 .invalid {
@@ -195,25 +194,26 @@ input{
     width: 260px;
     height: 40px;
     margin: 20px;
-    border-radius: 100px;
     font-size: medium;
-    background: #ff3e3e;
+    border-radius: 100px;
+    border: #2F7A1F solid 1px;
+    background:#2F7A1F;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     cursor: pointer;
 }
 .submit:hover{
-    background-color: #98c433;
-    font-size: large;
-    font-weight: bolder;
+    background-color:#88B04B;
+    color:#FFF;
+    font-weight: bold;
 }
 .message{
     margin-top: 20px;
     height: 400px;
     width: 300px;
-    background-color: #98c433;
+    background-color: #88B04B;
     border-radius: 5px;
     padding-top: 5px;
     border: solid 2px white;
@@ -233,20 +233,21 @@ input{
     border: solid 2px white;
     border-radius: 70px;
     margin: 20px;
-    background-color:#26116A;
+    background-color:#333;
 }
 .mdp_oublie :hover{
    text-decoration: underline;
 }
 .bluelink{
-    color: #26116A;
-    text-decoration: underline #26116A solid;
+    color: #333;
+    text-decoration: underline #333 solid;
 }
 footer{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     padding-bottom: 15px;
-    background-color: #26116A;
+    background-color: #333;
+    border: #333 solid 3px;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -257,15 +258,9 @@ footer{
     justify-content: center;
 }
 .footera:hover{
-    background-color: white;
+    background-color:#FFD700;
+    border: #333 solid 3px;
     color: black;
-}
-.banniere-logo-footer{
-    font-family: cursive;
-}
-.logo_footer{
-    height: 50px;
-    width: 50px;
 }
 
 @media only screen and (min-width: 1024px) {

@@ -1,6 +1,6 @@
         body {
             font-family: Arial, sans-serif;
-            background: #f3f3f3;
+            background: #f2f2f2;
             padding: 40px;
         }
 
@@ -22,7 +22,7 @@
             display: block;
             margin-top: 20px;
             font-weight: bold;
-            color: #444;
+            color: #333;
         }
 
         select, textarea {
@@ -38,7 +38,7 @@
         button {
             margin-top: 20px;
             padding: 12px 25px;
-            background-color: #4CAF50;
+            background-color: #2F7A1F;
             color: white;
             font-weight: bold;
             border: none;
@@ -47,10 +47,37 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #2F7A1F;
         }
 
         #statusMsg {
             margin-top: 15px;
             font-weight: bold;
         }
+       .logo_ecoride {
+    width: 100px;
+    height: 100px;
+}
+footer {
+    font-size: medium;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333333;
+    border: solid 5px #333333;
+}
+a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.footerlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footera:hover {
+    background-color: #FFD700;
+    color: black;
+}

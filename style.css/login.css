@@ -1,5 +1,5 @@
 body{ 
-    font-family: 'Franklin Gothic Medium','Times New Roman', Times, serif sans-serif;
+    font-family: 'Montsserat', serif sans-serif;
     box-sizing: border-box;
     min-width: 320px;
     max-width: 768px;
@@ -15,8 +15,8 @@ header{
     display: flex;
     justify-content: center;
     background-color: #333333;
-    border-bottom: #98c433 solid 2px;
-    font-family: cursive;
+    border-bottom: #333333 solid 2px;
+
 }
 .logo_ecoride{
     width: 100px;
@@ -28,7 +28,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color:#639e3f;
+    background-color:#88B04B;
     color: black;
     margin-top: 10px;
 }
@@ -100,10 +100,10 @@ header{
   }
   .dropdown-content a:hover {
     background-color:black;
-    color: white;
+    color:#FFD700;
 }
   .dropdown:hover .dropdown-content {display: flex;}
-  .dropdown:hover .dropbtn {background-color: #98c433;}
+  .dropdown:hover .dropbtn {background-color:#2F7A1F; color: #FFF;}
 
 .headnav{
     display: flex;
@@ -111,7 +111,6 @@ header{
     align-items: center;
 }
 nav{
-    font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     width: 260px;
     height: 50px;
@@ -134,22 +133,20 @@ a{
     width: 20px;
     height: 20px;
     margin-top: -10px;
-    color: white;
 }
-.ahome:hover{
-    background-color: white;
+.ahome:hover, .arrow_back:hover{
+    background-color:#FFD700;
     color: black;
 
 }
 .acreer_uncompte:hover{
     color: black;
-    background-color: white;
+    background-color: #FFD700;
 
 }
 .alogin{
     color: black;
-    background-color: white;
-
+    background-color:#FFD700;
 }
 
 main{
@@ -188,17 +185,17 @@ input{
     margin: 20px;
     border-radius: 100px;
     font-size: medium;
-    background: #ff3e3e;
+    border:none;
+    background: #2F7A1F;
+    color:#FFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     cursor: pointer;
 }
 .submit:hover{
-    background-color: #98c433;
-    font-size: large;
-    font-weight: bold;
+    background-color:#88B04B;
+    color:#000;
 }
 .message{
     margin-top: 20px;
@@ -215,8 +212,11 @@ input{
 }
 .formlink{
     color: black;
-    text-decoration-line: underline;
 }
+.formlink:hover{
+    text-decoration: underline;
+}
+
 .mdp_oublie{
     width: 135px;
     height: 20px;
@@ -224,21 +224,25 @@ input{
     border: solid 2px white;
     border-radius: 70px;
     margin: 20px;
-    background-color:#26116A;
+    background-color:#333333;
 }
 .mdp_oublie :hover{
    text-decoration: underline;
 }
 .bluelink{
-    color: #26116A;
-    text-decoration: underline #26116A solid;
+    color: #333333;
+    text-decoration: underline #333333 solid;
 }
-
+.bluelink:hover{
+    color: #2F7A1F;
+    font-weight: bold;
+}
 footer{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     padding-bottom: 15px;
-    background-color: #26116A;
+    border: #333333 solid 3px;
+    background-color: #333333;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -249,7 +253,7 @@ footer{
     justify-content: center;
 }
 .footera:hover{
-    background-color: white;
+    background-color:#FFD700;
     color: black;
 }
 .banniere-logo-footer{
@@ -283,12 +287,15 @@ footer{
 }
 
 .mdp_oublie{
-    width: 160px;
+    width: 140px;
     height: 20px;
     padding: 10px;
     border: solid 2px white;
     border-radius: 70px;
     margin: 20px;
-    background-color:#26116A;
+    background-color:#333333;
+}
+footer{
+    font-size: large;
 }
 }

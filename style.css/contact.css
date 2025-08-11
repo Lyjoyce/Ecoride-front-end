@@ -1,0 +1,59 @@
+
+h1{
+    font-size: larger;
+    margin-top: 40px;
+}
+form {
+    min-width: 320px;
+    margin-top: 50px;
+    border: 1px solid #98C433;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 75%;
+    padding: 10px;
+    margin-top: 40px;
+    border: 1px solid #98C433;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #FFD700;
+    border: #333 solid 3px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+footer{
+    font-size: medium;
+    padding-bottom: 15px;
+    background-color: #333;
+    border: #333 solid 2px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerlink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footera:hover{
+    background-color: white;
+    color: black;
+}
+

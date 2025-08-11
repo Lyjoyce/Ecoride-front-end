@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', serif sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     min-width: 320px;
     max-width: 768px;
@@ -360,7 +360,6 @@ input {
 }
 
 footer {
-    font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     padding-bottom: 15px;
     display: flex;
@@ -378,15 +377,6 @@ footer {
 .footera:hover {
     background-color: #FFD700;
     color: black;
-}
-
-.banniere-logo-footer {
-    font-family: cursive;
-}
-
-.logo_footer {
-    height: 50px;
-    width: 50px;
 }
 
 @media only screen and (min-width: 768px) {
