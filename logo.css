@@ -1,0 +1,12 @@
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: #2F7A1F; /* vert pour "Eco" */
+}
+
+.logo .ride {
+  font-weight: 400;
+  color: #333333; /* gris neutre pour "Ride" */
+}
