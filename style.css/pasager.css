@@ -65,7 +65,7 @@ header {
     border-radius: 10px;
     margin-left: 15px;
     margin-right: 15px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 #logout-btn {
@@ -154,7 +154,6 @@ header {
 }
 
 nav {
-    font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     width: 260px;
     height: 50px;

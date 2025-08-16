@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-    padding-left: 5px;
+    padding-left: 0px;
 }
 
 header {
@@ -154,7 +154,6 @@ header {
 }
 
 nav {
-    font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     width: 260px;
     height: 50px;
@@ -202,7 +201,6 @@ main {
 }
 
 .presentation_ecoride {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 400px;
     width: 320px;
     margin-top: 30px;
@@ -240,8 +238,8 @@ h1 {
 }
 
 .rod_presentation_itinerary {
-    width: 300px;
-    height: 30px;
+    width: 320px;
+    height: 50px;
     border-radius: 100px;
     background-color: #333333;
     color: white;
@@ -329,7 +327,7 @@ input {
     width: 200px;
     height: 40px;
     margin: 10px;
-    font-size: large;
+    font-size: small;
     border-radius: 30px;
     border: 3px solid #333333;
     background-color: #88B04B;
@@ -404,7 +402,6 @@ footer {
     }
 
     .presentation_ecoride {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         height: 600px;
         width: 690px;
         margin-top: 30px;
@@ -457,7 +454,7 @@ footer {
 @media only screen and (min-width: 1024px) {
     body {
         max-width: none;
-        font-size: medium;
+        font-size: large;
     }
 
     .logo_ecoride {
@@ -478,7 +475,6 @@ footer {
     }
 
     .presentation_ecoride {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         height: 400px;
         width: 990px;
         margin-top: 30px;
@@ -503,7 +499,7 @@ footer {
         font-size: large;
         display: flex;
         flex-direction: row;
-        margin-left: 0%;
+        margin-left: -10%;
         margin-top: 30%;
     }
 
