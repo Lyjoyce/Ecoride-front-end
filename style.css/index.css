@@ -232,7 +232,10 @@ h1 {
     flex-direction: column;
     margin-left: 25%;
 }
-
+.img_covoiturage{
+    width: 300px;
+    border-radius: 15px;
+}
 .preferences {
     border-top: #88B04B solid 1px;
 }
