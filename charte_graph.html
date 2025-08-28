@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Charte Graphique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
+      min-width: 320px;
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: #f5f5f5;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .color-block {
+      border-radius: 12px;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .black { background: #000000; }
+    .darkgray { background: #333333; }
+    .gold { background: #FFD700; color: #333; }
+    .lightgreen { background: #88B04B; }
+    .darkgreen { background: #2F7A1F; }
+  </style>
+</head>
+<body>
+  <h1>Charte Graphique</h1>
+  
+  <h2>Typographie</h2>
+  <p style="font-weight:400;">Texte normal – Montserrat Regular</p>
+  <p style="font-weight:600;">Texte accentué – Montserrat Semi-Bold</p>
+
+  <h2>Palette Couleurs</h2>
+  <div class="palette">
+    <div class="color-block black">
+      Noir<br>#000000<br><small>Texte principal</small>
+    </div>
+    <div class="color-block darkgray">
+      Gris foncé<br>#333333<br><small>Navigation / Hover</small>
+    </div>
+    <div class="color-block gold">
+      Or<br>#FFD700<br><small>Accents & éléments actifs</small>
+    </div>
+    <div class="color-block lightgreen">
+      Vert clair<br>#88B04B<br><small>Options & séparateurs</small>
+    </div>
+    <div class="color-block darkgreen">
+      Vert foncé<br>#2F7A1F<br><small>Bordures & formulaires</small>
+    </div>
+  </div>
+</body>
+</html>
