@@ -331,16 +331,20 @@ input {
     height: 40px;
     margin: 10px;
     font-size: small;
-    border-radius: 30px;
+    border-radius: 5px;
     border: 3px solid #333333;
     background-color: #88B04B;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #000;
     cursor: pointer;
 }
+#carpooling_propose:hover{
+    background-color: #2F7A1F;
+    color: white;
 
+}
 #carpooling-form {
     margin: 30px;
 }

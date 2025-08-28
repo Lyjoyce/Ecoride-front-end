@@ -198,7 +198,7 @@ input{
     border-radius: 100px;
     border: #2F7A1F solid 1px;
     background:#2F7A1F;
-    color: black;
+    color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +206,7 @@ input{
 }
 .submit:hover{
     background-color:#88B04B;
-    color:#FFF;
+    color:#000;
     font-weight: bold;
 }
 .message{
